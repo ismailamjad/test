@@ -24,6 +24,11 @@ Route::get('/', function () {
     ]);
 });
 
+Route::get('/static/{page}', function ($page) {
+  return Inertia::render("Static/$page");
+}); 
+
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return Inertia::render('Dashboard');
 })->name('dashboard');
+
