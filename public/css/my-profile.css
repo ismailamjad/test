@@ -1,0 +1,4 @@
+.profile-grid{
+    display: grid !important;
+    grid-template-columns: 7fr 29fr 25fr;
+}
