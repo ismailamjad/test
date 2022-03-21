@@ -53,13 +53,13 @@
                     <h3 class="f-28">$10,000</h3>
                     <ul class="d-flex align-items-center detail-list">
                         <li class="ms-3">
-                            <i class="fa-solid fa-heart"></i>
+                            <i class="fas fa-heart"></i>
                         </li>
                         <li class="ms-3">
-                            <i class="fa-solid fa-heart"></i>
+                            <i class="fas fa-heart"></i>
                         </li>
                         <li class="ms-3">
-                            <i class="fa-solid fa-heart"></i>
+                            <i class="fas fa-share-alt"></i>
                         </li>
                     </ul>
                 </div>
