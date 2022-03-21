@@ -8,6 +8,10 @@
                     <div class="card">
                         <div class="card-body">
                             <h4 class="f-22">Add Media</h4>
+                            <div class="select-images">
+                                         <UploadImages />
+
+                            </div>
                         </div>
                     </div>
 
@@ -94,3 +98,12 @@
 </div>
 </template>
 
+<script>
+import UploadImages from "vue-upload-drop-images"
+
+export default {
+         components: {
+                     UploadImages,
+                 },
+}
+</script>

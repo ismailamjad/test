@@ -26,6 +26,10 @@ body {
     border: none;
     padding: 12px 60px;
 }
+
+.select-images .container{
+    border: 0px !important;
+}
 .detail-form textarea { 
     resize: none;
 }
