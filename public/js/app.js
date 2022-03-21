@@ -5725,6 +5725,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_Header__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @/components/Header */ "./resources/js/components/Header.vue");
 /* harmony import */ var _components_BottomBar__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @/components/BottomBar */ "./resources/js/components/BottomBar.vue");
 /* harmony import */ var _components_Footer__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @/components/Footer */ "./resources/js/components/Footer.vue");
+/* harmony import */ var _components_Sidebar__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @/components/Sidebar */ "./resources/js/components/Sidebar.vue");
 //
 //
 //
@@ -5738,14 +5739,82 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
 
 
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
-  name: 'propertyListing',
+  name: "propertyListing",
   components: {
     TopBar: _components_Header__WEBPACK_IMPORTED_MODULE_0__["default"],
     BottomBar: _components_BottomBar__WEBPACK_IMPORTED_MODULE_1__["default"],
+    SideBar: _components_Sidebar__WEBPACK_IMPORTED_MODULE_3__["default"],
     Footer: _components_Footer__WEBPACK_IMPORTED_MODULE_2__["default"]
   }
 });
@@ -40383,14 +40452,165 @@ var render = function() {
       _vm._v(" "),
       _c("BottomBar"),
       _vm._v(" "),
-      _c("div", { staticClass: "contrainer" }),
+      _c("div", { staticClass: "container" }, [
+        _c("div", { staticClass: "row py-4" }, [
+          _c("div", { staticClass: "col-lg-3" }, [_c("SideBar")], 1),
+          _vm._v(" "),
+          _vm._m(0)
+        ])
+      ]),
       _vm._v(" "),
       _c("Footer")
     ],
     1
   )
 }
-var staticRenderFns = []
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "col-lg-9" }, [
+      _c("div", { staticClass: "content-wrapper" }, [
+        _c("div", {}, [
+          _c("table", { staticClass: "table" }, [
+            _c("thead", [
+              _c("tr", [
+                _c(
+                  "th",
+                  { staticClass: "align-middle", attrs: { scope: "col" } },
+                  [_vm._v("Sr#")]
+                ),
+                _vm._v(" "),
+                _c(
+                  "th",
+                  {
+                    staticClass: "align-middle",
+                    attrs: { scope: "col", colspan: "5" }
+                  },
+                  [_vm._v("Property")]
+                ),
+                _vm._v(" "),
+                _c(
+                  "th",
+                  { staticClass: "align-middle", attrs: { scope: "col" } },
+                  [_vm._v("Price")]
+                ),
+                _vm._v(" "),
+                _c(
+                  "th",
+                  { staticClass: "align-middle", attrs: { scope: "col" } },
+                  [_vm._v("PDF")]
+                ),
+                _vm._v(" "),
+                _c(
+                  "th",
+                  { staticClass: "align-middle", attrs: { scope: "col" } },
+                  [_vm._v("Action")]
+                )
+              ])
+            ]),
+            _vm._v(" "),
+            _c("tbody", [
+              _c("tr", [
+                _c(
+                  "td",
+                  { staticClass: "align-middle", attrs: { scope: "row" } },
+                  [_vm._v("1")]
+                ),
+                _vm._v(" "),
+                _c(
+                  "td",
+                  {
+                    staticClass: "align-middle",
+                    staticStyle: { width: "250px" },
+                    attrs: { colspan: "5" }
+                  },
+                  [
+                    _c("div", { staticClass: "d-flex align-items-center" }, [
+                      _c("div", { staticClass: "property-img" }, [
+                        _c("img", {
+                          attrs: { src: "/assets/images/property/img-01.png" }
+                        })
+                      ]),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "content-box p-3" }, [
+                        _c("div", { staticClass: "property-desc mb-2" }, [
+                          _c("h3", { staticClass: "m-0 p-0 f-22" }, [
+                            _vm._v(
+                              "\n                                                  Keas 69 Str. 15234, Chalandri Athens, New York\n                                              "
+                            )
+                          ])
+                        ]),
+                        _vm._v(" "),
+                        _c(
+                          "div",
+                          { staticClass: "d-flex justify-content-between" },
+                          [
+                            _c("div", { staticClass: "bed-count" }, [
+                              _c("div", { staticClass: "icon" }, [
+                                _c("i", { staticClass: "fas fa-bed" })
+                              ]),
+                              _vm._v(" "),
+                              _c("p", { staticClass: "m-0 p-0 f-16" }, [
+                                _c("span", [_vm._v("4")]),
+                                _vm._v(" beds")
+                              ])
+                            ]),
+                            _vm._v(" "),
+                            _c("div", { staticClass: "bath-count" }, [
+                              _c("div", { staticClass: "icon" }, [
+                                _c("i", { staticClass: "fas fa-bath" })
+                              ]),
+                              _vm._v(" "),
+                              _c("p", { staticClass: "m-0 p-0 f-16" }, [
+                                _c("span", [_vm._v("4")]),
+                                _vm._v(" baths")
+                              ])
+                            ]),
+                            _vm._v(" "),
+                            _c("div", { staticClass: "square-ft" }, [
+                              _c("div", { staticClass: "icon" }, [
+                                _c("i", { staticClass: "fas fa-draw-square" })
+                              ]),
+                              _vm._v(" "),
+                              _c("p", { staticClass: "m-0 p-0 f-16" }, [
+                                _c("span", [_vm._v("200")]),
+                                _vm._v(" sqft")
+                              ])
+                            ])
+                          ]
+                        )
+                      ])
+                    ])
+                  ]
+                ),
+                _vm._v(" "),
+                _c("td", { staticClass: "align-middle" }, [_vm._v("15000")]),
+                _vm._v(" "),
+                _c("td", { staticClass: "align-middle" }, [
+                  _c("img", {
+                    attrs: { src: "/assets/images/property/qr-code.png" }
+                  })
+                ]),
+                _vm._v(" "),
+                _c("td", { staticClass: "align-middle" }, [
+                  _c("a", { staticClass: "text-dark", attrs: { href: "#" } }, [
+                    _c("i", { staticClass: "fas fa-edit" })
+                  ]),
+                  _vm._v(" "),
+                  _c("a", { staticClass: "text-dark", attrs: { href: "#" } }, [
+                    _c("i", { staticClass: "far fa-trash-alt" })
+                  ])
+                ])
+              ])
+            ])
+          ])
+        ])
+      ])
+    ])
+  }
+]
 render._withStripped = true
 
 

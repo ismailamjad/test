@@ -1,28 +1,90 @@
 <template>
-    <section>
-       <TopBar/>
-        <BottomBar/>
+  <section>
+    <TopBar />
+    <BottomBar />
 
-        <div class="contrainer">
-           
+    <div class="container">
+      <div class="row py-4">
+        <div class="col-lg-3">
+          <SideBar />
         </div>
-           <Footer/>
-    </section>
- 
+        <div class="col-lg-9">
+          <div class="content-wrapper">
+            <div class="">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th class="align-middle" scope="col">Sr#</th>
+                    <th class="align-middle" scope="col" colspan="5">Property</th>
+                    <th class="align-middle" scope="col">Price</th>
+                    <th class="align-middle" scope="col">PDF</th>
+                    <th class="align-middle" scope="col">Action</th>
+
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="align-middle" scope="row">1</td>
+                    <td class="align-middle" colspan="5" style="width: 250px">
+                        <div class="d-flex align-items-center"> 
+                        <div class="property-img"><img src="/assets/images/property/img-01.png" /></div>
+                        <div class="content-box p-3">
+                                           
+                                            <div class="property-desc mb-2">
+                                                <h3 class="m-0 p-0 f-22">
+                                                    Keas 69 Str. 15234, Chalandri Athens, New York
+                                                </h3>
+                                            </div>
+                                            <div class="d-flex justify-content-between">
+                                                <div class="bed-count">
+                                                    <div class="icon">
+                                                        <i class="fas fa-bed"></i>
+                                                    </div>
+                                                    <p class="m-0 p-0 f-16"><span>4</span> beds</p>
+                                                </div>
+                                                <div class="bath-count">
+                                                    <div class="icon">
+                                                        <i class="fas fa-bath"></i>
+                                                    </div>
+                                                    <p class="m-0 p-0 f-16"><span>4</span> baths</p>
+                                                </div>
+                                                <div class="square-ft">
+                                                    <div class="icon">
+                                                        <i class="fas fa-draw-square"></i>
+                                                    </div>
+                                                    <p class="m-0 p-0 f-16"><span>200</span> sqft</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                        </div>
+                         
+                        
+                        </td>
+                    <td class="align-middle">15000</td>
+                    <td class="align-middle"><img src="/assets/images/property/qr-code.png" /></td>
+                    <td class="align-middle"> <a href="#" class="text-dark"><i class="fas fa-edit"></i></a> <a href="#" class="text-dark"><i class="far fa-trash-alt"></i></a></td>
+                  </tr>
+                
+               
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <Footer />
+  </section>
 </template>
 
 <script>
-  
-    import TopBar from '@/components/Header';
-    import BottomBar from '@/components/BottomBar';
-    import Footer from '@/components/Footer';
+import TopBar from "@/components/Header";
+import BottomBar from "@/components/BottomBar";
+import Footer from "@/components/Footer";
+import SideBar from "@/components/Sidebar";
 
-
-
-    export default {
-
-        name: 'propertyListing',
-        components: { TopBar, BottomBar, Footer},
-        
-    };
+export default {
+  name: "propertyListing",
+  components: { TopBar, BottomBar, SideBar, Footer },
+};
 </script>
