@@ -2,3 +2,30 @@
     display: grid !important;
     grid-template-columns: 7fr 29fr 25fr;
 }
+
+
+@media  (min-width: 768px) and (max-width: 1023px){
+    .profile-grid {
+        display: grid !important;
+        grid-template-columns: 7fr 29fr 10fr !important;
+        column-gap: 30px;
+    }
+    .action-btn button{
+        width: 100% !important;
+    }
+
+}
+
+@media (max-width: 767px) {
+    .profile-grid {
+        display: grid !important;
+        grid-template-columns: 1fr !important;
+        row-gap: 20px;
+    }
+    .action-btn button{
+        width: 50% !important;
+    }
+    .features .d-flex{
+        flex-direction: column !important;
+    }
+}

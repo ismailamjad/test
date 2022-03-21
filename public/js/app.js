@@ -5648,11 +5648,98 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
-  name: 'blank',
+  name: "blank",
   components: {
     TopBar: _components_Header__WEBPACK_IMPORTED_MODULE_0__["default"],
     BottomBar: _components_BottomBar__WEBPACK_IMPORTED_MODULE_1__["default"],
@@ -5810,6 +5897,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_BottomBar__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @/components/BottomBar */ "./resources/js/components/BottomBar.vue");
 /* harmony import */ var _components_Footer__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @/components/Footer */ "./resources/js/components/Footer.vue");
 /* harmony import */ var _components_Sidebar__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @/components/Sidebar */ "./resources/js/components/Sidebar.vue");
+//
+//
 //
 //
 //
@@ -40421,7 +40510,7 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "container" }, [
+    return _c("div", { staticClass: "container my-5" }, [
       _c("div", { staticClass: "row" }, [
         _c("div", { staticClass: "col-md-12" }, [
           _c("h2", { staticClass: "f-18 primary-color mb-3" }, [
@@ -40434,70 +40523,222 @@ var staticRenderFns = [
         "div",
         {
           staticClass:
-            "d-grid profile-grid box-shadow p-3 bg-white border-radius-05"
+            "box-shadow\n        p-3\n        bg-white\n        border-radius-05\n        mb-3"
         },
         [
-          _c("div", { staticClass: "profile-img" }, [
-            _c("img", {
-              attrs: { src: "/assets/images/property/img-01.png", alt: "" }
-            })
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "person-info" }, [
-            _c("div", { staticClass: "person-name" }, [
-              _c("h2", { staticClass: "f-22 mb-0" }, [_vm._v("John Simon")])
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "rating mb-0" }, [
-              _c("span", [_c("i", { staticClass: "fas fa-star f-12" })]),
-              _vm._v(" "),
-              _c("span", [_c("i", { staticClass: "fas fa-star f-12" })]),
-              _vm._v(" "),
-              _c("span", [_c("i", { staticClass: "fas fa-star f-12" })]),
-              _vm._v(" "),
-              _c("span", [_c("i", { staticClass: "fas fa-star f-12" })]),
-              _vm._v(" "),
-              _c("span", [_c("i", { staticClass: "fas fa-star f-12" })]),
-              _vm._v(" "),
-              _c("span", { staticClass: "f-12" }, [_vm._v("(5)")])
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "meta-info d-flex gap-3 mb-0" }, [
-              _c("div", { staticClass: "created-at" }, [
-                _c("p", { staticClass: "mb-0" }, [_vm._v(" February 28, 2022")])
+          _c(
+            "div",
+            {
+              staticClass:
+                "\n        d-grid\n        profile-grid\n        \n      "
+            },
+            [
+              _c("div", { staticClass: "profile-img" }, [
+                _c("img", {
+                  attrs: { src: "/assets/images/property/img-01.png", alt: "" }
+                })
               ]),
               _vm._v(" "),
-              _c("div", { staticClass: "email" }, [
-                _c("p", { staticClass: "mb-0" }, [_vm._v("user@roamyhome.com")])
+              _c("div", { staticClass: "person-info" }, [
+                _c("div", { staticClass: "person-name" }, [
+                  _c("h2", { staticClass: "f-22 mb-0" }, [_vm._v("John Simon")])
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "rating mb-0" }, [
+                  _c("span", [_c("i", { staticClass: "fas fa-star f-12" })]),
+                  _vm._v(" "),
+                  _c("span", [_c("i", { staticClass: "fas fa-star f-12" })]),
+                  _vm._v(" "),
+                  _c("span", [_c("i", { staticClass: "fas fa-star f-12" })]),
+                  _vm._v(" "),
+                  _c("span", [_c("i", { staticClass: "fas fa-star f-12" })]),
+                  _vm._v(" "),
+                  _c("span", [_c("i", { staticClass: "fas fa-star f-12" })]),
+                  _vm._v(" "),
+                  _c("span", { staticClass: "f-12" }, [_vm._v("(5)")])
+                ]),
+                _vm._v(" "),
+                _c(
+                  "div",
+                  {
+                    staticClass:
+                      "meta-info d-flex gap-md-3 gap-0 mb-0 flex-md-row flex-column"
+                  },
+                  [
+                    _c("div", { staticClass: "created-at" }, [
+                      _c("p", { staticClass: "mb-0" }, [
+                        _c("i", { staticClass: "fas fa-user-clock" }),
+                        _vm._v(" February 28, 2022\n            ")
+                      ])
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "email" }, [
+                      _c("p", { staticClass: "mb-0" }, [
+                        _c("i", { staticClass: "fas fa-envelope" }),
+                        _vm._v(" user@roamyhome.com\n            ")
+                      ])
+                    ])
+                  ]
+                ),
+                _vm._v(" "),
+                _c("div", { staticClass: "profile-desc mb-0" }, [
+                  _c("p", { staticClass: "m-0 p-0" }, [
+                    _vm._v(
+                      "\n            Lorem Ipsum is simply dummy text of the printing and typesetting\n            industry. Lorem Ipsum has been the industry’s standard dummy text\n            ever since the 1500s, when an unknown printer took a galley of\n            type and scrambled it to make a type specimen book.\n          "
+                    )
+                  ])
+                ])
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "action-btn" }, [
+                _c(
+                  "div",
+                  {
+                    staticClass:
+                      "d-flex flex-column align-items-md-end align-items-start  gap-2"
+                  },
+                  [
+                    _c(
+                      "button",
+                      {
+                        staticClass:
+                          "btn btn-primary w-25 gradient-color border-0"
+                      },
+                      [_vm._v("\n            Edit Profile\n          ")]
+                    ),
+                    _vm._v(" "),
+                    _c("button", { staticClass: "btn border-01 w-25" }, [
+                      _vm._v("Delete Profile")
+                    ])
+                  ]
+                )
+              ])
+            ]
+          ),
+          _vm._v(" "),
+          _c("div", { staticClass: "features mt-3" }, [
+            _c("hr", { staticClass: "m-0 p-0" }),
+            _vm._v(" "),
+            _c("div", { staticClass: "d-flex" }, [
+              _c("div", { staticClass: "info-box p-4" }, [
+                _c("p", { staticClass: "mb-0 text-center" }, [
+                  _vm._v("Job Success")
+                ]),
+                _vm._v(" "),
+                _c("p", { staticClass: "fw-bold mb-0 text-center" }, [
+                  _vm._v("100%")
+                ])
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "info-box p-4" }, [
+                _c("p", { staticClass: "mb-0 text-center" }, [
+                  _vm._v("Total Earned ")
+                ]),
+                _vm._v(" "),
+                _c("p", { staticClass: "fw-bold mb-0 text-center" }, [
+                  _vm._v("$100k+")
+                ])
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "info-box p-4" }, [
+                _c("p", { staticClass: "mb-0 text-center" }, [_vm._v("Jobs")]),
+                _vm._v(" "),
+                _c("p", { staticClass: "fw-bold mb-0 text-center" }, [
+                  _vm._v("412")
+                ])
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "info-box p-4" }, [
+                _c("p", { staticClass: "mb-0 text-center" }, [
+                  _vm._v("Hour Worked ")
+                ]),
+                _vm._v(" "),
+                _c("p", { staticClass: "fw-bold mb-0 text-center" }, [
+                  _vm._v("4800")
+                ])
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "info-box p-4" }, [
+                _c("p", { staticClass: "mb-0 text-center" }, [
+                  _vm._v("Specialized In ")
+                ]),
+                _vm._v(" "),
+                _c("p", { staticClass: "fw-bold mb-0 text-center" }, [
+                  _vm._v("Homes")
+                ])
               ])
             ]),
             _vm._v(" "),
-            _c("div", { staticClass: "profile-desc mb-0" }, [
-              _c("p", { staticClass: "m-0 p-0" }, [
-                _vm._v(
-                  "\n                     Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.\n                 "
-                )
-              ])
-            ])
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "action-btn" }, [
-            _c(
-              "div",
-              { staticClass: "d-flex flex-column align-items-end gap-2" },
-              [
-                _c("button", { staticClass: "btn btn-primary w-25" }, [
-                  _vm._v("Edit Profile")
-                ]),
-                _vm._v(" "),
-                _c("button", { staticClass: "btn btn-primary w-25" }, [
-                  _vm._v("Delete Profile")
-                ])
-              ]
-            )
+            _c("hr", { staticClass: "m-0 p-0" })
           ])
         ]
-      )
+      ),
+      _vm._v(" "),
+      _c("div", { staticClass: "box-shadow border-radius-05 bg-white py-3" }, [
+        _c("div", { staticClass: "px-3" }, [
+          _c("h2", { staticClass: "f-22 mb-0" }, [_vm._v("Customers Feedback")])
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "table-responsive property-tbl px-2" }, [
+          _c("table", { staticClass: "table px-0" }, [
+            _c("thead", [
+              _c("tr", [
+                _c(
+                  "th",
+                  {
+                    staticClass: "py-3",
+                    staticStyle: { width: "180px" },
+                    attrs: { scope: "col", colspan: "2" }
+                  },
+                  [_vm._v("\n                Customer Name\n              ")]
+                ),
+                _vm._v(" "),
+                _c(
+                  "th",
+                  {
+                    staticClass: "py-3",
+                    staticStyle: { width: "200px" },
+                    attrs: { scope: "col" }
+                  },
+                  [_vm._v("Rating")]
+                ),
+                _vm._v(" "),
+                _c("th", { staticClass: "py-3", attrs: { scope: "col" } }, [
+                  _vm._v("Comments")
+                ])
+              ])
+            ]),
+            _vm._v(" "),
+            _c("tbody", [
+              _c("tr", [
+                _c(
+                  "td",
+                  { staticStyle: { width: "180px" }, attrs: { colspan: "2" } },
+                  [_vm._v("Mark")]
+                ),
+                _vm._v(" "),
+                _c("td", { staticStyle: { width: "200px" } }, [
+                  _c("span", [_c("i", { staticClass: "fas fa-star f-12" })]),
+                  _vm._v(" "),
+                  _c("span", [_c("i", { staticClass: "fas fa-star f-12" })]),
+                  _vm._v(" "),
+                  _c("span", [_c("i", { staticClass: "fas fa-star f-12" })]),
+                  _vm._v(" "),
+                  _c("span", [_c("i", { staticClass: "fas fa-star f-12" })]),
+                  _vm._v(" "),
+                  _c("span", [_c("i", { staticClass: "fas fa-star f-12" })])
+                ]),
+                _vm._v(" "),
+                _c("td", [
+                  _vm._v(
+                    "\n                Lorem Ipsum is simply dummy text of the printing and\n                typesetting industry. Lorem Ipsum has been the industry’s\n                standard dummy text ever since the 1500s, when an unknown\n                printer took a galley of type and scrambled it to make a type\n                specimen book.\n              "
+                  )
+                ])
+              ])
+            ])
+          ])
+        ])
+      ])
     ])
   }
 ]
