@@ -1,3 +1,11 @@
+.property-tbl .table>:not(:last-child)>:last-child>* {
+    border-bottom-color: #eee;
+    border-bottom-width: 2px;
+}
+
+.property-tbl .table td:last-child{
+    border: 0px !important;
+}
 
 @media(max-width:767px){
 .mobile-width{
