@@ -5930,6 +5930,9 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
 
 
 
@@ -40799,6 +40802,13 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "col-lg-9" }, [
+      _c("div", { staticClass: "add-new-btn text-end mb-2" }, [
+        _c("a", { staticClass: "btn border f-18" }, [
+          _c("i", { staticClass: "fa fa-plus" }),
+          _vm._v(" Add New")
+        ])
+      ]),
+      _vm._v(" "),
       _c(
         "div",
         { staticClass: "content-wrapper box-shadow bg-white border-radius-05" },
