@@ -15,7 +15,7 @@ class PropertyController extends Controller
      */
     public function index()
     {
-        return Inertia::render('Property/new-property', [
+        return Inertia::render('Property/property-listing', [
             "property" => Property::get()
         ]);
     }

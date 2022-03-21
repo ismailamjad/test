@@ -11,8 +11,7 @@
                         <div class="card-body">
                             <h4 class="f-22">Add Media</h4>
                             <div class="select-images">
-                                         <UploadImages  @changed="handleImages"/>
-
+                                <UploadImages  @changed="handleImages"/>
                             </div>
                         </div>
                     </div>
