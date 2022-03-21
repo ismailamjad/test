@@ -9,24 +9,24 @@
           <SideBar />
         </div>
         <div class="col-lg-9">
-          <div class="content-wrapper">
-            <div class="">
+          <div class="content-wrapper box-shadow bg-white">
+            <div class="table-responsive">
               <table class="table">
                 <thead>
                   <tr>
-                    <th class="align-middle" scope="col">Sr#</th>
-                    <th class="align-middle" scope="col" colspan="5">Property</th>
-                    <th class="align-middle" scope="col">Price</th>
-                    <th class="align-middle" scope="col">PDF</th>
-                    <th class="align-middle" scope="col">Action</th>
+                    <th class="align-middle py-4 px-3" scope="col">Sr#</th>
+                    <th class="align-middle py-4 px-3" scope="col" colspan="5">Property</th>
+                    <th class="align-middle py-4 px-3" scope="col">Price</th>
+                    <th class="align-middle py-4 px-3" scope="col">PDF</th>
+                    <th class="align-middle py-4 px-3" scope="col">Action</th>
 
                   </tr>
                 </thead>
-                <tbody>
-                  <tr>
-                    <td class="align-middle" scope="row">1</td>
-                    <td class="align-middle" colspan="5" style="width: 250px">
-                        <div class="d-flex align-items-center"> 
+                <tbody >
+                  <tr class="px-3">
+                    <td class="align-middle px-3" scope="row">1</td>
+                    <td class="align-middle px-3 mobile-width" colspan="5" style="width: 250px" >
+                        <div class="d-flex align-items-center mobile-width"> 
                         <div class="property-img"><img src="/assets/images/property/img-01.png" /></div>
                         <div class="content-box p-3">
                                            
@@ -60,9 +60,9 @@
                          
                         
                         </td>
-                    <td class="align-middle">15000</td>
-                    <td class="align-middle"><img src="/assets/images/property/qr-code.png" /></td>
-                    <td class="align-middle"> <a href="#" class="text-dark"><i class="fas fa-edit"></i></a> <a href="#" class="text-dark"><i class="far fa-trash-alt"></i></a></td>
+                    <td class="align-middle px-3">15000</td>
+                    <td class="align-middle px-3"><img src="/assets/images/property/qr-code.png" /></td>
+                    <td class="align-middle px-3"> <a href="#" class="text-dark"><i class="fas fa-edit"></i></a> <a href="#" class="text-dark"><i class="far fa-trash-alt"></i></a></td>
                   </tr>
                 
                
