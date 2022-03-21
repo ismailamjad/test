@@ -45056,7 +45056,7 @@ var render = function() {
                     _vm._v(" "),
                     _c(
                       "tbody",
-                      _vm._l(_vm.property, function(propert) {
+                      _vm._l(_vm.property, function(propert, index) {
                         return _c(
                           "tr",
                           { key: propert.id, staticClass: "px-3" },
@@ -45067,7 +45067,7 @@ var render = function() {
                                 staticClass: "align-middle px-3",
                                 attrs: { scope: "row" }
                               },
-                              [_vm._v(_vm._s(propert.id))]
+                              [_vm._v(_vm._s(index + 1))]
                             ),
                             _vm._v(" "),
                             _c(
@@ -45113,7 +45113,7 @@ var render = function() {
                                           "div",
                                           {
                                             staticClass:
-                                              "d-flex justify-content-between"
+                                              "d-flex justify-content-between gap-3"
                                           },
                                           [
                                             _c(
@@ -45207,23 +45207,35 @@ var render = function() {
                             _vm._v(" "),
                             _vm._m(5, true),
                             _vm._v(" "),
-                            _c("td", { staticClass: "align-middle px-3" }, [
-                              _vm._m(6, true),
-                              _vm._v(" "),
-                              _c(
-                                "span",
-                                {
-                                  staticClass: "text-dark",
-                                  attrs: { type: "button" },
-                                  on: {
-                                    click: function($event) {
-                                      return _vm.deleteProperty(propert.id)
+                            _c(
+                              "td",
+                              { staticClass: "align-middle px-3" },
+                              [
+                                _c(
+                                  "router-link",
+                                  {
+                                    staticClass: "text-dark",
+                                    attrs: { to: "'property/create" }
+                                  },
+                                  [_c("i", { staticClass: "fas fa-edit" })]
+                                ),
+                                _vm._v(" "),
+                                _c(
+                                  "span",
+                                  {
+                                    staticClass: "text-dark",
+                                    attrs: { type: "button" },
+                                    on: {
+                                      click: function($event) {
+                                        return _vm.deleteProperty(propert.id)
+                                      }
                                     }
-                                  }
-                                },
-                                [_c("i", { staticClass: "far fa-trash-alt" })]
-                              )
-                            ])
+                                  },
+                                  [_c("i", { staticClass: "far fa-trash-alt" })]
+                                )
+                              ],
+                              1
+                            )
                           ]
                         )
                       }),
@@ -45322,14 +45334,6 @@ var staticRenderFns = [
     var _c = _vm._self._c || _h
     return _c("td", { staticClass: "align-middle px-3" }, [
       _c("img", { attrs: { src: "/assets/images/property/qr-code.png" } })
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("a", { staticClass: "text-dark", attrs: { href: "#" } }, [
-      _c("i", { staticClass: "fas fa-edit" })
     ])
   }
 ]

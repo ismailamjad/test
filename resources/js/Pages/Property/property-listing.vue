@@ -23,8 +23,8 @@
                   </tr>
                 </thead>
                 <tbody >
-                  <tr class="px-3" v-for="propert in property" :key="propert.id">
-                    <td class="align-middle px-3" scope="row">{{propert.id}}</td>
+                  <tr class="px-3" v-for="(propert, index) in property" :key="propert.id">
+                    <td class="align-middle px-3" scope="row">{{index +1}}</td>
                     <td class="align-middle px-3 mobile-width" colspan="5" style="width: 250px" >
                         <div class="d-flex align-items-center mobile-width"> 
                         <div class="property-img"><img src="/assets/images/property/img-01.png" /></div>
@@ -35,7 +35,7 @@
                                                     {{propert.title}} 
                                                 </h3>
                                             </div>
-                                            <div class="d-flex justify-content-between">
+                                            <div class="d-flex justify-content-between gap-3">
                                                 <div class="bed-count">
                                                     <div class="icon">
                                                         <i class="fas fa-bed"></i>
@@ -62,7 +62,7 @@
                         </td>
                     <td class="align-middle px-3">{{propert.price}}</td>
                     <td class="align-middle px-3"><img src="/assets/images/property/qr-code.png" /></td>
-                    <td class="align-middle px-3"> <a href="#" class="text-dark"><i class="fas fa-edit"></i></a> <span type="button" @click="deleteProperty(propert.id)"  class="text-dark"><i class="far fa-trash-alt"></i></span></td>
+                    <td class="align-middle px-3"> <router-link to="'property/create" class="text-dark"><i class="fas fa-edit"></i></router-link> <span type="button" @click="deleteProperty(propert.id)"  class="text-dark"><i class="far fa-trash-alt"></i></span></td>
                   </tr>
                 
                

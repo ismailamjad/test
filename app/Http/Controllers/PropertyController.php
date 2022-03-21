@@ -39,11 +39,14 @@ class PropertyController extends Controller
     public function store(Request $request)
     {
         $data = $request->all();
+        $data['user_id'] = auth()->user()->id;
         
         Property::create( $data);
 
         return redirect()->route('property.index');
     }
+
+
 
     public function uploadImages(Request $request){
         $files = $request->file('image');
@@ -69,6 +72,7 @@ class PropertyController extends Controller
     public function edit(Property $property)
     {
         //
+        return Inertia::render('Property/edit-property');
     }
 
     /**
@@ -92,9 +96,6 @@ class PropertyController extends Controller
     public function destroy(Request $request, $id)
     {
         Property::find($id)->delete();
-
-        $request->session()->flash('success', 'Post deleted successfully!');
-
         return redirect()->route('property.index');
     }
 }
