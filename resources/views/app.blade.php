@@ -16,6 +16,7 @@
         <link rel="stylesheet" href="{{asset('css/global.css') }}">
         <link rel="stylesheet" href="{{asset('css/fonts.css') }}">
         <link rel="stylesheet" href="{{asset('css/sidebar.css') }}">
+        <link rel="stylesheet" href="{{asset('css/style.css') }}">
 
         <link rel="stylesheet" href=" https://pro.fontawesome.com/releases/v5.10.0/css/all.css">
 
