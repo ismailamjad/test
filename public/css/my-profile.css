@@ -17,6 +17,9 @@
 }
 
 @media (max-width: 767px) {
+    .width-600{
+        width: 600px !important;
+    }
     .profile-grid {
         display: grid !important;
         grid-template-columns: 1fr !important;

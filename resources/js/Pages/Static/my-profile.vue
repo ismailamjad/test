@@ -3,7 +3,7 @@
     <TopBar />
     <BottomBar />
 
-    <div class="container my-5">
+    <div class="container my-3">
       <div class="row">
         <div class="col-md-12">
           <h2 class="f-18 primary-color mb-3">My Profile</h2>
@@ -102,8 +102,8 @@
           <h2 class="f-22 mb-0">Customers Feedback</h2>
         </div>
 
-        <div class="table-responsive property-tbl px-2">
-          <table class="table px-0">
+        <div class="table-responsive property-tbl px-2 ">
+          <table class="table px-0 width-600">
             <thead>
               <tr>
                 <th scope="col" class="py-3" colspan="2" style="width: 180px">

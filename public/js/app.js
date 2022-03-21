@@ -40510,7 +40510,7 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "container my-5" }, [
+    return _c("div", { staticClass: "container my-3" }, [
       _c("div", { staticClass: "row" }, [
         _c("div", { staticClass: "col-md-12" }, [
           _c("h2", { staticClass: "f-18 primary-color mb-3" }, [
@@ -40679,8 +40679,8 @@ var staticRenderFns = [
           _c("h2", { staticClass: "f-22 mb-0" }, [_vm._v("Customers Feedback")])
         ]),
         _vm._v(" "),
-        _c("div", { staticClass: "table-responsive property-tbl px-2" }, [
-          _c("table", { staticClass: "table px-0" }, [
+        _c("div", { staticClass: "table-responsive property-tbl px-2 " }, [
+          _c("table", { staticClass: "table px-0 width-600" }, [
             _c("thead", [
               _c("tr", [
                 _c(
