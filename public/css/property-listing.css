@@ -3,7 +3,8 @@
     border-bottom-width: 2px;
 }
 
-.property-tbl .table td:last-child{
+ 
+.property-tbl table tr:last-child td {
     border: 0px !important;
 }
 
