@@ -1,5 +1,7 @@
 <template>
 <div>
+    <TopBar/>
+    <BottomBar/>
     <section class="property-detail-banner">
         <div class="container">
             <div class="row">
@@ -93,17 +95,20 @@
                 </div>
             </div>
         </div>
-    </section>
     
+    </section>
+    <Footer />
 </div>
 </template>
 
 <script>
-import UploadImages from "vue-upload-drop-images"
-
+import UploadImages from "vue-upload-drop-images";
+ import TopBar from '@/components/Header';
+    import BottomBar from '@/components/BottomBar';
+import Footer from '@/components/Footer';
 export default {
          components: {
-                     UploadImages,
+                     UploadImages, TopBar, BottomBar, Footer
                  },
 }
 </script>

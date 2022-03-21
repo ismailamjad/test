@@ -1,168 +1,13 @@
 <template>
     <section>
-        <div class="main-header">
-            <div class="container">
-                <div class="row">
-                    <nav class="navbar navbar-expand-lg navbar-light">
-                        <div class="container-fluid">
-                            <a class="navbar-brand" href="#"> <img src="/assets/images/logo.png" class="img-fluid" /></a>
-                            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                                <span class="navbar-toggler-icon"></span>
-                            </button>
-                            <div class="collapse navbar-collapse justify-content-between" id="navbarSupportedContent">
-                                <form class="d-flex">
-                                    <input class="form-control me-2 bg-transparent" type="search" placeholder="Search" aria-label="Search" />
-                                </form>
-                                <ul class="navbar-nav justify-content-end mb-2 mb-lg-0">
-                                    <li class="nav-item dropdown">
-                                        <a class="nav-link dropdown-toggle text-white d-flex align-items-center gap-2" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                            <div><img src="/assets/images/circle.png" /></div>
-                                            <div>Marker</div>
-                                        </a>
-                                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                            <li><a class="dropdown-item" href="#">Action</a></li>
-                                            <li>
-                                                <a class="dropdown-item" href="#">Another action</a>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </nav>
-                </div>
-            </div>
-        </div>
-        <div class="bottom-bar">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="box-shadow">
-                            <nav class="navbar navbar-expand-lg navbar-light bg-light border-radius-05">
-                                <div class="container-fluid">
-                                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                                        <ul class="navbar-nav me-auto gap-3 mb-2 mb-lg-0">
-                                            <li class="nav-item">
-                                                <a class="nav-link active primary-color f-18" aria-current="page" href="#"><i class="fas fa-th"></i> Home</a>
-                                            </li>
-                                            <li class="nav-item">
-                                                <a class="nav-link secondary-color f-18" href="#"><i class="fas fa-city"></i> My Properties</a>
-                                            </li>
-                                            <li class="nav-item">
-                                                <a class="nav-link secondary-color f-18" href="#"><i class="fas fa-user"></i> Profile</a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </nav>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+       <TopBar/>
+        <BottomBar/>
 
         <div class="main-wrapper my-5">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-3 d-lg-block d-none">
-                        <div class="left-wrapper">
-                            <div class="sidebar border-radius-05">
-                                <div class="property-type">
-
-                                </div>
-                               <div class="price-range mb-3">
-                                   <h2 class="f-22 white-color" >Price Range</h2>
-                                <VueSimpleRangeSlider
-                                    style="width: 300px"
-                                    :min="0"
-                                    :max="1000000"
-                                    :logarithmic="true"
-                                    v-model="range"
-
-
-                                />
-                               </div>
-                                <div class="property-room mb-3">
-                                    <h2 class="f-22 white-color">Property Rooms</h2>
-                                   <div class="row">
-                                       <div class="col-md-6">
-                                           <label class="white-color"> Bed Rooms</label>
-
-                                           <select class="form-select" aria-label="Default select example">
-                                               <option selected>01</option>
-                                               <option value="2">02</option>
-                                               <option value="3">03</option>
-                                               <option value="4">04</option>
-                                           </select>
-                                       </div>
-                                       <div class="col-md-6">
-                                           <label class="white-color"> Bath Rooms</label>
-
-                                           <select class="form-select" aria-label="Default select example">
-                                               <option selected>01</option>
-                                               <option value="2">02</option>
-                                               <option value="3">03</option>
-                                               <option value="4">04</option>
-                                           </select>
-                                       </div>
-                                   </div>
-                                </div>
-                                      <div class="availability mb-3">
-                                          <h2 class="f-22 white-color">Availibility</h2>
-
-                                          <div class="form-check d-flex justify-content-between ps-0">
-                                           <label class="form-check-label white-color " for="flexRadioDefault1">
-                                               Ready to Move
-                                           </label>
-                                           <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-
-                                       </div>
-                                       <div class="form-check d-flex justify-content-between ps-0">
-                                           <label class="form-check-label white-color" for="flexRadioDefault2">
-                                               Within 06 Months
-                                           </label>
-                                           <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
-
-                                       </div>
-
-                                          <div class="form-check d-flex justify-content-between ps-0">
-                                              <label class="form-check-label white-color " for="flexRadioDefault1">
-                                                  Within 01 Year
-                                              </label>
-                                              <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-
-                                          </div>
-
-                                          <div class="form-check d-flex justify-content-between ps-0">
-                                              <label class="form-check-label white-color " for="flexRadioDefault1">
-                                                  More than 01 Year
-                                              </label>
-                                              <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-
-                                          </div>
-                                   </div>
-                                <div class="price-range mb-3">
-                                    <h2 class="f-22 white-color" >Property Size</h2>
-                                    <span> 0 - 2,500 sqft</span>
-                                    <VueSimpleRangeSlider
-                                        style="width: 300px"
-                                        :min="0"
-                                        :max="1000000"
-                                        :logarithmic="false"
-                                        v-model="size"
-
-
-                                    />
-                                </div>
-                                <div class="filters d-flex align-items-center justify-content-between mb-3">
-                                    <p class="f-18 white-color mb-0 pb-0" >Reset Filters</p>
-                                     <button class="btn btn-light px-4">Apply </button>
-                                </div>
-
-
-                            </div>
-
-                        </div>
+                       <SideBar />
                     </div>
                     <div class="col-lg-9 col-md-12">
                         <div class="content-wrapper">
@@ -222,19 +67,26 @@
                 </div>
             </div>
         </div>
+           <Footer/>
     </section>
+ 
 </template>
 
 <script>
-    import VueSimpleRangeSlider from 'vue-simple-range-slider';
-    import 'vue-simple-range-slider/dist/vueSimpleRangeSlider.css'
+  
     import Label from "@/Jetstream/Label";
     import Button from "@/Jetstream/Button";
+    import TopBar from '@/components/Header';
+    import BottomBar from '@/components/BottomBar';
+    import SideBar from '@/components/Sidebar';
+        import Footer from '@/components/Footer';
+
+
 
     export default {
 
         name: 'main',
-        components: {Button, Label, VueSimpleRangeSlider },
+        components: {Button, Label , TopBar, BottomBar, SideBar, Footer},
         data() {
             return {
                 range: [20,1000],
