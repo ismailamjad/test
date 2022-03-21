@@ -5805,6 +5805,47 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 
@@ -40485,7 +40526,7 @@ var staticRenderFns = [
         "div",
         { staticClass: "content-wrapper box-shadow bg-white border-radius-05" },
         [
-          _c("div", { staticClass: "table-responsive" }, [
+          _c("div", { staticClass: "table-responsive property-tbl" }, [
             _c("table", { staticClass: "table" }, [
               _c("thead", [
                 _c("tr", [
@@ -40537,7 +40578,7 @@ var staticRenderFns = [
               ]),
               _vm._v(" "),
               _c("tbody", [
-                _c("tr", { staticClass: "px-3" }, [
+                _c("tr", [
                   _c(
                     "td",
                     {
@@ -40551,7 +40592,119 @@ var staticRenderFns = [
                     "td",
                     {
                       staticClass: "align-middle px-3 mobile-width",
-                      staticStyle: { width: "250px" },
+                      staticStyle: { width: "270px" },
+                      attrs: { colspan: "5" }
+                    },
+                    [
+                      _c(
+                        "div",
+                        {
+                          staticClass: "d-flex align-items-center mobile-width"
+                        },
+                        [
+                          _c("div", { staticClass: "property-img" }, [
+                            _c("img", {
+                              attrs: {
+                                src: "/assets/images/property/img-01.png"
+                              }
+                            })
+                          ]),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "content-box p-3" }, [
+                            _c("div", { staticClass: "property-desc mb-2" }, [
+                              _c("h3", { staticClass: "m-0 p-0 f-22" }, [
+                                _vm._v(
+                                  "\n                                                  Keas 69 Str. 15234, Chalandri Athens, New York\n                                              "
+                                )
+                              ])
+                            ]),
+                            _vm._v(" "),
+                            _c(
+                              "div",
+                              { staticClass: "d-flex justify-content-between" },
+                              [
+                                _c("div", { staticClass: "bed-count" }, [
+                                  _c("div", { staticClass: "icon" }, [
+                                    _c("i", { staticClass: "fas fa-bed" })
+                                  ]),
+                                  _vm._v(" "),
+                                  _c("p", { staticClass: "m-0 p-0 f-16" }, [
+                                    _c("span", [_vm._v("4")]),
+                                    _vm._v(" beds")
+                                  ])
+                                ]),
+                                _vm._v(" "),
+                                _c("div", { staticClass: "bath-count" }, [
+                                  _c("div", { staticClass: "icon" }, [
+                                    _c("i", { staticClass: "fas fa-bath" })
+                                  ]),
+                                  _vm._v(" "),
+                                  _c("p", { staticClass: "m-0 p-0 f-16" }, [
+                                    _c("span", [_vm._v("4")]),
+                                    _vm._v(" baths")
+                                  ])
+                                ]),
+                                _vm._v(" "),
+                                _c("div", { staticClass: "square-ft" }, [
+                                  _c("div", { staticClass: "icon" }, [
+                                    _c("i", {
+                                      staticClass: "fas fa-draw-square"
+                                    })
+                                  ]),
+                                  _vm._v(" "),
+                                  _c("p", { staticClass: "m-0 p-0 f-16" }, [
+                                    _c("span", [_vm._v("200")]),
+                                    _vm._v(" sqft")
+                                  ])
+                                ])
+                              ]
+                            )
+                          ])
+                        ]
+                      )
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c("td", { staticClass: "align-middle px-3" }, [
+                    _vm._v("15000")
+                  ]),
+                  _vm._v(" "),
+                  _c("td", { staticClass: "align-middle px-3" }, [
+                    _c("img", {
+                      attrs: { src: "/assets/images/property/qr-code.png" }
+                    })
+                  ]),
+                  _vm._v(" "),
+                  _c("td", { staticClass: "align-middle px-3" }, [
+                    _c(
+                      "a",
+                      { staticClass: "text-dark", attrs: { href: "#" } },
+                      [_c("i", { staticClass: "fas fa-edit" })]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "a",
+                      { staticClass: "text-dark", attrs: { href: "#" } },
+                      [_c("i", { staticClass: "far fa-trash-alt" })]
+                    )
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("tr", [
+                  _c(
+                    "td",
+                    {
+                      staticClass: "align-middle px-3",
+                      attrs: { scope: "row" }
+                    },
+                    [_vm._v("1")]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "td",
+                    {
+                      staticClass: "align-middle px-3 mobile-width",
+                      staticStyle: { width: "270px" },
                       attrs: { colspan: "5" }
                     },
                     [
