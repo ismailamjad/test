@@ -12,6 +12,9 @@
   .primary-bg{
       background:  var(--primary-color);
   }
+  .white-color{
+      color: var(--white);
+  }
   .secondary-color{
     color: var(--secondary-color) !important;
 }
@@ -34,7 +37,7 @@
 }
 
 .card-shadow{
-    
+
     box-shadow: 0px 3px 10px #1515151A;
-    
+
 }
