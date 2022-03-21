@@ -5500,8 +5500,8 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 
-
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  props: {},
   data: function data() {
     return {
       form: {
@@ -5524,6 +5524,36 @@ __webpack_require__.r(__webpack_exports__);
     };
   },
   methods: {
+    uploadimage: function uploadimage(e) {
+      console.log(this.$refs.files.files);
+
+      for (var _i = 0; _i < this.$refs.files.files.length; _i++) {
+        //  console.log(this.$refs.files.files[i]);
+        this.form.images[_i] = this.$refs.files.files[_i]; // console.log(this.form.images[i]);
+
+        this.images.push(this.$refs.files.files[_i]);
+      } //  this.form.image = e.target.files;
+
+    },
+    submitform: function submitform() {
+      var data = new FormData();
+      data.append('title', this.form.title);
+      data.append('price', this.form.desc);
+      var self = this;
+
+      for (var _i2 = 0; _i2 < this.images.length; _i2++) {
+        var file = self.images[_i2];
+        var a = data.append('files[' + _i2 + ']', file);
+        console.log(a);
+      }
+
+      var config = {
+        headers: {
+          "content-type": "multipart/form-data"
+        }
+      };
+      this.$inertia.post('post/create', data, config);
+    },
     testing: function testing(event) {
       // console.dir(event.target.files)
       // console.log(event);
@@ -5543,33 +5573,7 @@ __webpack_require__.r(__webpack_exports__);
       Inertia.post(route('upload'), data);
       */
     }
-  } // setup () {
-  //   const form = reactive({
-  //     title: null,
-  //     type: null,
-  //     price: null,
-  //     beds: null,
-  //     floors: null,
-  //     baths: null,
-  //     lot_area: null,
-  //     lot_dimension: null,
-  //     home_area: null,
-  //     primary_color: null,
-  //     secondary_color: null,
-  //     description: null,
-  //     neighborhood_desc: null,
-  //     location: null,
-  //     image: null,
-  //   })
-  //   function submit() {
-  //     // console.log(this.file);
-  //     Inertia.post(route('property.store'), this.form);
-  //   }
-  //   return { 
-  //       form, 
-  //       submit }
-  // },
-
+  }
 });
 
 /***/ }),
@@ -38870,8 +38874,9 @@ var render = function() {
                         ),
                         _vm._v(" "),
                         _c("input", {
-                          attrs: { type: "file", name: "images", multiple: "" },
-                          on: { input: _vm.testing }
+                          ref: "files",
+                          attrs: { type: "file", name: "image", multiple: "" },
+                          on: { change: _vm.uploadimage }
                         })
                       ])
                     ]
