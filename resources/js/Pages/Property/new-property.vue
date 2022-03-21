@@ -133,7 +133,6 @@ export default {
                     address_1: null,
                     address_2: null,
                     visit_active_time: null,
-                    image: [],
                 }
             }
         },

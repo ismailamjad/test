@@ -1,5 +1,7 @@
 <template>
 <div>
+    <TopBar/>
+    <BottomBar/>
     <section class="property-detail-banner">
      <div class="container">
          <div class="row">
@@ -68,7 +70,7 @@
     <section class="property-detail-bio">
         <div class="container">
             <div class="row">
-                <div class="col-lg-9">
+                <div class="col-lg-9 mb-3">
                     <div class="card">
                         <div class="card-body">
                             <h4 class="f-22">Property Bio</h4>
@@ -275,18 +277,18 @@
             </div>
         </div>
     </section>
+    <Footer />
 </div>
 </template>
 
 <script>
-
-    export default {
-
-        name: 'propertydetail',
-        data() {
-            return {
-
-            };
-        },
-    };
+import TopBar from "@/Components/Header";
+import BottomBar from "@/Components/BottomBar";
+import Footer from "@/Components/Footer";
+export default {
+         components: {
+                     TopBar, BottomBar, Footer
+                 },
+}
 </script>
+

@@ -1,3 +1,14 @@
+.property-tbl .table>:not(:last-child)>:last-child>* {
+    border-bottom-color: #eee;
+    border-bottom-width: 2px;
+}
+
+ .add-new-btn a {
+     background: transparent !important;
+ }
+.property-tbl table tr:last-child td {
+    border: 0px !important;
+}
 
 @media(max-width:767px){
 .mobile-width{

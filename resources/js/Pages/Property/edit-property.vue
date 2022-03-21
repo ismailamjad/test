@@ -6,7 +6,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <h2 class="f-18 mt-3">Add New Property</h2>
+                    <h2 class="f-18 mt-3">Update Property</h2>
                     <div class="card">
                         <div class="card-body">
                             <h4 class="f-22">Add Media</h4>
@@ -19,75 +19,75 @@
                     <div class="card mt-4">
                         <div class="card-body">
                             <h4 class="f-22">Property Info</h4>
-                                <form class="detail-form" @submit.prevent="submitform()">
+                                <form class="detail-form" @submit.prevent="updateProperty()">
                                     <div class="row">
                                         <div class="form-group col-md-4">
                                             <label class="f-18 mb-2 mt-3">Title</label>
-                                            <input type="text" v-model="form.title" class="form-control f-16" placeholder="First Name">
+                                            <input type="text" v-model="editform.title" class="form-control f-16" placeholder="First Name">
                                         </div>
                                         <div class="form-group col-md-4">
                                             <label class="f-18 mb-2 mt-3">Property Type</label>
-                                            <input type="text" v-model="form.type" class="form-control f-16" placeholder="Apartment ">
+                                            <input type="text" v-model="editform.type" class="form-control f-16" placeholder="Apartment ">
                                         </div>
                                         <div class="form-group col-md-4">
                                             <label class="f-18 mb-2 mt-3">Price</label>
-                                            <input type="text" v-model="form.price" class="form-control f-16" placeholder="$5000">
+                                            <input type="text" v-model="editform.price" class="form-control f-16" placeholder="$5000">
                                         </div>
                                         <div class="form-group col-md-4">
                                             <label class="f-18 mb-2 mt-3">Beds</label>
-                                            <input type="text" v-model="form.beds" class="form-control f-16" placeholder="4">
+                                            <input type="text" v-model="editform.beds" class="form-control f-16" placeholder="4">
                                         </div>
                                         <div class="form-group col-md-4">
                                             <label class="f-18 mb-2 mt-3">Baths</label>
-                                            <input type="text" v-model="form.baths" class="form-control f-16" placeholder="2">
+                                            <input type="text" v-model="editform.baths" class="form-control f-16" placeholder="2">
                                         </div>
                                         <div class="form-group col-md-4">
                                             <label class="f-18 mb-2 mt-3">Floors</label>
-                                            <input type="text" v-model="form.floors" class="form-control f-16" placeholder="2">
+                                            <input type="text" v-model="editform.floors" class="form-control f-16" placeholder="2">
                                         </div>
                                         <div class="form-group col-md-4">
                                             <label class="f-18 mb-2 mt-3">Lot Area</label>
-                                            <input type="text" v-model="form.lot_area" class="form-control f-16" placeholder="150 sqft">
+                                            <input type="text" v-model="editform.lot_area" class="form-control f-16" placeholder="150 sqft">
                                         </div>
                                         <div class="form-group col-md-4">
                                             <label class="f-18 mb-2 mt-3">Home Area</label>
-                                            <input type="text" v-model="form.home_area" class="form-control f-16" placeholder="120 sqft">
+                                            <input type="text" v-model="editform.home_area" class="form-control f-16" placeholder="120 sqft">
                                         </div>
                                         <div class="form-group col-md-4">
                                             <label class="f-18 mb-2 mt-3">Lot Dimension</label>
-                                            <input type="text" v-model="form.lot_dimension" class="form-control f-16" placeholder="5 X 20 X 15">
+                                            <input type="text" v-model="editform.lot_dimension" class="form-control f-16" placeholder="5 X 20 X 15">
                                         </div>
                                         <div class="form-group col-md-4">
                                             <label class="f-18 mb-2 mt-3">Primary Color</label>
-                                            <input type="text" v-model="form.primary_color" class="form-control f-16" placeholder="Light Cream Color">
+                                            <input type="text" v-model="editform.primary_color" class="form-control f-16" placeholder="Light Cream Color">
                                         </div>
                                         <div class="form-group col-md-4">
                                             <label class="f-18 mb-2 mt-3">Secondary Color</label>
-                                            <input type="text" v-model="form.secondary_color" class="form-control f-16" placeholder="Dark Cream Color">
+                                            <input type="text" v-model="editform.secondary_color" class="form-control f-16" placeholder="Dark Cream Color">
                                         </div>
                                         <div class="form-group col-md-4">
                                             <label class="f-18 mb-2 mt-3">Visit Active Time</label>
-                                            <input type="text" v-model="form.visit_active_time" class="form-control f-16" placeholder="10:00 am - 03:00 pm">
+                                            <input type="text" v-model="editform.visit_active_time" class="form-control f-16" placeholder="10:00 am - 03:00 pm">
                                         </div>
                                         <div class="form-group">
                                             <label class="f-18 mb-2 mt-3">Property Bio</label>
-                                            <textarea class="form-control f-16" v-model="form.description" rows="4" placeholder="Describe"></textarea>
+                                            <textarea class="form-control f-16" v-model="editform.description" rows="4" placeholder="Describe"></textarea>
                                         </div>
                                         <div class="form-group">
                                             <label class="f-18 mb-2 mt-3">Neighborhood Bio</label>
-                                            <textarea class="form-control f-16" rows="4" v-model="form.neighborhood_desc" placeholder="Describe"></textarea>
+                                            <textarea class="form-control f-16" rows="4" v-model="editform.neighborhood_desc" placeholder="Describe"></textarea>
                                         </div>
                                         <h2 class="f-22 mt-4 f-semi">Location</h2>
                                         <div class="form-group col-md-4">
                                             <label class="f-18 mb-2 mt-3">Address Line 1</label>
-                                            <input type="text" v-model="form.address_1" class="form-control f-16" placeholder="Address">
+                                            <input type="text" v-model="editform.address_1" class="form-control f-16" placeholder="Address">
                                         </div>
                                         <div class="form-group col-md-4">
                                             <label class="f-18 mb-2 mt-3">Address Line 2</label>
-                                            <input type="text"  v-model="form.address_2" class="form-control f-16" placeholder="Address">
+                                            <input type="text"  v-model="editform.address_2" class="form-control f-16" placeholder="Address">
                                         </div>
                                     </div>
-                                    <button type="submit" class="btn btn-primary">Create Now</button>
+                                    <button type="submit" class="btn btn-primary">Update Now</button>
                                 </form>
                         </div>
                     </div>
@@ -111,11 +111,11 @@ export default {
         components: {
                     UploadImages, TopBar, BottomBar , Footer , SideBar
                 },
-        props:{},
+        props:['id' , 'property'] ,
 
         data(){
             return{
-                form:{
+                editform:{
                     title: null,
                     type: null,
                     price: null,
@@ -132,48 +132,54 @@ export default {
                     address_1: null,
                     address_2: null,
                     visit_active_time: null,
-                    image: [],
                 }
             }
         },
         methods:{
+
+            updateProperty(){
+                // console.log(this.id);
+                this.$inertia.put(route('property.update' , this.id),this.editform);
+            },
+
+            FetchPropertyValues(){
+                this.editform.title = this.property.title;
+                this.editform.type = this.property.type;
+                this.editform.price = this.property.price;
+                this.editform.beds = this.property.beds;
+                this.editform.floors = this.property.floors;
+                this.editform.baths = this.property.baths;
+                this.editform.lot_area = this.property.lot_area;
+                this.editform.lot_dimension = this.property.lot_dimension;
+                this.editform.home_area = this.property.home_area;
+                this.editform.primary_color = this.property.primary_color;
+                this.editform.secondary_color = this.property.secondary_color;
+                this.editform.description = this.property.description;
+                this.editform.neighborhood_desc = this.property.neighborhood_desc;
+                this.editform.address_1 = this.property.address_1;
+                this.editform.address_2 = this.property.address_2;
+                this.editform.visit_active_time = this.property.visit_active_time;
+            },
+
+
+//for image
+
             handleImages(files){
                 let data = new FormData();
                 console.log(files);
-                 for (let i = 0; i < files.length; i++) {
+                    for (let i = 0; i < files.length; i++) {
                         data.append(files[i].name, files[i])
                 }
                 Inertia.post('uploadImages', this.data);
                 // console.log(files);
             },
-            
-            
             uploadimage(e){
-
                 this.form.image = e.target.files[0];
             },
-            submitform(){
-                let data = new FormData();
-                data.append('title', this.form.title);
-                data.append('type', this.form.type);
-                data.append('price', this.form.price);
-                data.append('beds', this.form.beds);
-                data.append('baths', this.form.baths);
-                data.append('floors', this.form.floors);
-                data.append('lot_area', this.form.lot_area);
-                data.append('home_area', this.form.home_area);
-                data.append('lot_dimension', this.form.lot_dimension);
-                data.append('primary_color', this.form.primary_color);
-                data.append('secondary_color', this.form.secondary_color);
-                data.append('description', this.form.description);
-                data.append('neighborhood_desc', this.form.neighborhood_desc);
-                data.append('address_1', this.form.address_1);
-                data.append('address_2', this.form.address_2);
-                data.append('visit_active_time', this.form.visit_active_time);
-
-                this.$inertia.post(route('property.store'),data);
-                // Inertia.post(route('property.store'), data);
-            }
-        }           
+        },
+        
+        mounted() {
+                this.FetchPropertyValues();
+        },
 }
 </script>

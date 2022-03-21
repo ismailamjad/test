@@ -9,6 +9,9 @@
           <SideBar />
         </div>
         <div class="col-lg-9">
+          <div class="add-new-btn text-end mb-2">
+            <Link :href="route('property.create')" class="btn border f-18"><i class="fa fa-plus"> </i> Add New</Link>
+          </div>
           <div class="content-wrapper box-shadow bg-white border-radius-05">
             <div class="table-responsive">
               <table class="table">
@@ -62,7 +65,7 @@
                         </td>
                     <td class="align-middle px-3">{{propert.price}}</td>
                     <td class="align-middle px-3"><img src="/assets/images/property/qr-code.png" /></td>
-                    <td class="align-middle px-3"> <router-link to="'property/create" class="text-dark"><i class="fas fa-edit"></i></router-link> <span type="button" @click="deleteProperty(propert.id)"  class="text-dark"><i class="far fa-trash-alt"></i></span></td>
+                    <td class="align-middle px-3">  <Link :href="route('property.edit' ,propert.id)" class="text-dark"><i class="fas fa-edit"></i></Link><span type="button" @click="deleteProperty(propert.id)"  class="text-dark"><i class="far fa-trash-alt"></i></span></td>
                   </tr>
                 
                
@@ -83,10 +86,11 @@ import BottomBar from "@/Components/BottomBar";
 import Footer from "@/Components/Footer";
 import SideBar from "@/Components/Sidebar";
 import { Inertia } from '@inertiajs/inertia'
+import { Link } from '@inertiajs/inertia-vue'
 
 export default {
   name: "propertyListing",
-  components: { TopBar, BottomBar, SideBar, Footer },
+  components: { TopBar, BottomBar, SideBar, Footer , Link},
   props:[ 'property'] , 
 
   methods:{

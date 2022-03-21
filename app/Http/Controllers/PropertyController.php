@@ -8,11 +8,6 @@ use Inertia\Inertia;
 
 class PropertyController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function index()
     {
         return Inertia::render('Property/property-listing', [
@@ -20,22 +15,11 @@ class PropertyController extends Controller
         ]);
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function create()
     {
         return Inertia::render('Property/new-property');
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
     public function store(Request $request)
     {
         $data = $request->all();
@@ -46,53 +30,36 @@ class PropertyController extends Controller
         return redirect()->route('property.index');
     }
 
-
-
     public function uploadImages(Request $request){
         $files = $request->file('image');
         dd($files);
     }
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Models\Property  $property
-     * @return \Illuminate\Http\Response
-     */
+   
     public function show(Property $property)
     {
         //
+       
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Models\Property  $property
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(Property $property)
+   
+    public function edit($id)
     {
-        //
-        return Inertia::render('Property/edit-property');
+        return Inertia::render('Property/edit-property', [
+            "property" => Property::findOrFail($id),
+            "id" => $id,
+        ]);
+        
+        // return Property::findOrFail($id);
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Property  $property
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, Property $property)
+    
+    public function update(Request $request ,$id)
     {
-        //
+        $property = Property::find($id);
+        $property->update($request->all());
+        return redirect()->route('property.index');
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\Models\Property  $property
-     * @return \Illuminate\Http\Response
-     */
     public function destroy(Request $request, $id)
     {
         Property::find($id)->delete();
