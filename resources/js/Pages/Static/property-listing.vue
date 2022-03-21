@@ -9,7 +9,7 @@
           <SideBar />
         </div>
         <div class="col-lg-9">
-          <div class="content-wrapper box-shadow bg-white">
+          <div class="content-wrapper box-shadow bg-white border-radius-05">
             <div class="table-responsive">
               <table class="table">
                 <thead>
