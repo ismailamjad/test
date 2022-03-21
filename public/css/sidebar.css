@@ -1,0 +1,12 @@
+.sidebar{
+    background: transparent linear-gradient(180deg, #485922 0%, #0D0D0D 100%) 0% 0% no-repeat padding-box;
+    padding: 30px !important;
+}
+.sidebar .form-check-input[type=radio] {
+    border-radius: 50%;
+    background: transparent;
+    border: 1px solid #fff;
+}
+.sidebar .form-check-input:checked{
+    background: #fff;
+}

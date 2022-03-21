@@ -15,7 +15,7 @@ class PropertyController extends Controller
      */
     public function index()
     {
-        return Inertia::render('Property/Index', [
+        return Inertia::render('Property/new-property', [
             "property" => Property::get()
         ]);
     }
@@ -27,7 +27,7 @@ class PropertyController extends Controller
      */
     public function create()
     {
-        return Inertia::render('Property/Create');
+        return Inertia::render('Property/new-property');
     }
 
     /**
@@ -39,12 +39,16 @@ class PropertyController extends Controller
     public function store(Request $request)
     {
         $data = $request->all();
-        $data['user_id'] = '1';
-        $data1 = Property::create( $data);
+        
+        Property::create( $data);
 
         return redirect()->route('property.index');
     }
 
+    public function uploadImages(Request $request){
+        $files = $request->file('image');
+        dd($files);
+    }
     /**
      * Display the specified resource.
      *

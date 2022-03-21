@@ -138,84 +138,84 @@
 </template>
 
 <script>
-import { Inertia } from '@inertiajs/inertia'
+// import { Inertia } from '@inertiajs/inertia'
 
-export default {  
-    props:{},
-     data(){
-         return{
-             form:{
-                title: null,
-      type: null,
-      price: null,
-      beds: null,
-      floors: null,
-      baths: null,
-      lot_area: null,
-      lot_dimension: null,
-      home_area: null,
-      primary_color: null,
-      secondary_color: null,
-      description: null,
-      neighborhood_desc: null,
-      location: null,
-      images: [],
-             }
-         }
-     },
-     methods:{
-         uploadimage(e){
-             console.log(this.$refs.files.files);
-             for(let i = 0; i < this.$refs.files.files.length; i++){
-                //  console.log(this.$refs.files.files[i]);
-                  this.form.images[i] = this.$refs.files.files[i]  ;
-                    // console.log(this.form.images[i]);
-                 this.images.push(this.$refs.files.files[i]);
+// export default {  
+//     props:{},
+//      data(){
+//          return{
+//              form:{
+//                 title: null,
+//       type: null,
+//       price: null,
+//       beds: null,
+//       floors: null,
+//       baths: null,
+//       lot_area: null,
+//       lot_dimension: null,
+//       home_area: null,
+//       primary_color: null,
+//       secondary_color: null,
+//       description: null,
+//       neighborhood_desc: null,
+//       location: null,
+//       images: [],
+//              }
+//          }
+//      },
+//      methods:{
+//          uploadimage(e){
+//              console.log(this.$refs.files.files);
+//              for(let i = 0; i < this.$refs.files.files.length; i++){
+//                 //  console.log(this.$refs.files.files[i]);
+//                   this.form.images[i] = this.$refs.files.files[i]  ;
+//                     // console.log(this.form.images[i]);
+//                  this.images.push(this.$refs.files.files[i]);
                  
-             }
-            //  this.form.image = e.target.files;
-         },
-          submitform(){
+//              }
+//             //  this.form.image = e.target.files;
+//          },
+//           submitform(){
             
-             let data = new FormData();
-              data.append('title', this.form.title);
-              data.append('price', this.form.desc);
-              let self = this;
+//              let data = new FormData();
+//               data.append('title', this.form.title);
+//               data.append('price', this.form.desc);
+//               let self = this;
 
-              for (let i = 0; i < this.images.length; i++) {
-                 let file = self.images[i];
-                  let a = data.append('files['+i+']', file);
-                    console.log(a);
-              }
+//               for (let i = 0; i < this.images.length; i++) {
+//                  let file = self.images[i];
+//                   let a = data.append('files['+i+']', file);
+//                     console.log(a);
+//               }
 
-              const config = {
-                  headers: {"content-type" : "multipart/form-data"}
-              }
-             this.$inertia.post('post/create',data , config);
-         },
+//               const config = {
+//                   headers: {"content-type" : "multipart/form-data"}
+//               }
+//              this.$inertia.post('post/create',data , config);
+//          },
 
 
-            testing(event){
-          // console.dir(event.target.files)
-          // console.log(event);
-          this.images= event.target.files;
-          console.log(this.images);
-        },
+//             testing(event){
+//           // console.dir(event.target.files)
+//           // console.log(event);
+//           this.images= event.target.files;
+//           console.log(this.images);
+//         },
 
-        uploadFile(){
-          // alert("triger");
-          var data = new FormData();
-          //send multiple images
-          // var files = event.target.files;
-            data.append("images[]" , files[i]);
-          data.append("title" , title );
-          Inertia.post(route('property.store'), this.form);
-          /*
-        //save image locally api
-          Inertia.post(route('upload'), data);
-          */
+//         uploadFile(){
+//           // alert("triger");
+//           var data = new FormData();
+//           //send multiple images
+//           // var files = event.target.files;
+//             data.append("images[]" , files[i]);
+//           data.append("title" , title );
+//           Inertia.post(route('property.store'), this.form);
+//           /*
+//         //save image locally api
+//           Inertia.post(route('upload'), data);
+//           */
 
-        }
-     }
-    }
+//         }
+//      }
+//     }
 </script>

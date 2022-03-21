@@ -24,13 +24,14 @@ class CreatePropertiesTable extends Migration
             $table->string('floors');
             $table->string('beds');
             $table->string('price');
-            $table->string('location');
-            $table->string('image');
             $table->string('description');
             $table->string('neighborhood_desc');
             $table->string('secondary_color');
             $table->string('primary_color');
-            $table->string('user_id');
+            $table->string('visit_active_time');
+            $table->string('address_1');
+            $table->string('address_2')->nullable();
+            $table->string('user_id')->nullable();
             $table->timestamps();
         });
     }

@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\PropertyController;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
@@ -24,8 +25,13 @@ Route::get('/', function () {
     ]);
 });
 
+Route::get('/static/{page}', function ($page) {
+  return Inertia::render("Static/$page");
+}); 
+
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return Inertia::render('Dashboard');
 })->name('dashboard');
 
 Route::resource('property', PropertyController::class);
+Route::post('uploadImages', [PropertyController::class , 'uploadImages']);

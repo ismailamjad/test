@@ -138,46 +138,46 @@
 </template>
 
 <script>
-import { reactive } from 'vue'
-import { Inertia } from '@inertiajs/inertia'
+// import { reactive } from 'vue'
+// import { Inertia } from '@inertiajs/inertia'
 
-export default {
+// export default {
 
-props:['property'],
-  data(){
-    return {
-      form: {
-        title : this.$$props.property.title,
-      },
-    };
-  },
-  setup () {
-    const form = reactive({
-      title: null,
-      type: null,
-      price: null,
-      beds: null,
-      floors: null,
-      baths: null,
-      lot_area: null,
-      lot_dimension: null,
-      home_area: null,
-      primary_color: null,
-      secondary_color: null,
-      description: null,
-      neighborhood_desc: null,
-      location: null,
-      image: null,
-    })
+// props:['property'],
+//   data(){
+//     return {
+//       form: {
+//         title : this.$$props.property.title,
+//       },
+//     };
+//   },
+//   setup () {
+//     const form = reactive({
+//       title: null,
+//       type: null,
+//       price: null,
+//       beds: null,
+//       floors: null,
+//       baths: null,
+//       lot_area: null,
+//       lot_dimension: null,
+//       home_area: null,
+//       primary_color: null,
+//       secondary_color: null,
+//       description: null,
+//       neighborhood_desc: null,
+//       location: null,
+//       image: null,
+//     })
 
-    function submit() {
-      // Inertia.post('property.store', form)
-      Inertia.post(route('property.store'), this.form);
-    }
+//     function submit() {
+//       // Inertia.post('property.store', form)
+//       Inertia.post(route('property.store'), this.form);
+//     }
 
-    return { 
-        form, 
-        submit }
-  },
-}
+//     return { 
+//         form, 
+//         submit }
+//   },
+// }
 </script>
