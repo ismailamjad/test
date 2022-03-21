@@ -3,7 +3,10 @@
     border-bottom-width: 2px;
 }
 
-.property-tbl .table td:last-child{
+ .add-new-btn a {
+     background: transparent !important;
+ }
+.property-tbl table tr:last-child td {
     border: 0px !important;
 }
 

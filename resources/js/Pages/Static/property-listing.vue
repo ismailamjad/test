@@ -9,6 +9,9 @@
           <SideBar />
         </div>
         <div class="col-lg-9">
+          <div class="add-new-btn text-end mb-2">
+            <a class="btn border f-18"><i class="fa fa-plus"> </i> Add New</a>
+          </div>
           <div class="content-wrapper box-shadow bg-white border-radius-05">
             <div class="table-responsive property-tbl">
               <table class="table">
@@ -110,6 +113,8 @@
               </table>
             </div>
           </div>
+
+        
         </div>
       </div>
     </div>
