@@ -36,6 +36,27 @@ body {
 .f-semi {
     font-weight: 600;
 }
+.image-update {
+    width: 210px;
+    height: 210px;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    border: 1px solid #0D0D0D33;
+    border-radius: 5px;
+}
+.image-update span {
+    width: 35px;
+    height: 35px;
+    background: #F2F2F2 0% 0% no-repeat padding-box;
+    text-align: right;
+    float: right;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    margin-top: 5px;
+    margin-right: 5px;
+}
+
 
 @media screen and (max-width: 767px) {
     .property-detail-second h3 {
