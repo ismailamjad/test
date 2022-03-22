@@ -5959,20 +5959,16 @@ __webpack_require__.r(__webpack_exports__);
         neighborhood_desc: null,
         address_1: null,
         address_2: null,
-        visit_active_time: null
+        visit_active_time: null // files: [],
+
       }
     };
   },
   methods: {
     handleImages: function handleImages(files) {
-      var data = new FormData();
-      console.log(files);
+      console.log(files); // this.form.files.push(...files);
 
-      for (var i = 0; i < files.length; i++) {
-        data.append(files[i].name, files[i]);
-      }
-
-      _inertiajs_inertia__WEBPACK_IMPORTED_MODULE_5__.Inertia.post('uploadImages', this.data); // console.log(files);
+      console.log('data()', this.files); // this.$inertia.post('upload-images' , this.files);
     },
     uploadimage: function uploadimage(e) {
       this.form.image = e.target.files[0];
@@ -5994,7 +5990,8 @@ __webpack_require__.r(__webpack_exports__);
       data.append('neighborhood_desc', this.form.neighborhood_desc);
       data.append('address_1', this.form.address_1);
       data.append('address_2', this.form.address_2);
-      data.append('visit_active_time', this.form.visit_active_time);
+      data.append('visit_active_time', this.form.visit_active_time); // data.append('images[]', this.images);
+
       this.$inertia.post(route('property.store'), data); // Inertia.post(route('property.store'), data);
     }
   }
@@ -42468,7 +42465,18 @@ var render = function() {
                   _c(
                     "div",
                     { staticClass: "select-images" },
-                    [_c("UploadImages", { on: { changed: _vm.handleImages } })],
+                    [
+                      _c("UploadImages", {
+                        on: { changed: _vm.handleImages },
+                        model: {
+                          value: _vm.form.files,
+                          callback: function($$v) {
+                            _vm.$set(_vm.form, "files", $$v)
+                          },
+                          expression: "form.files"
+                        }
+                      })
+                    ],
                     1
                   )
                 ])

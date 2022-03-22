@@ -2,12 +2,16 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Traits\ImageUpload;
 use App\Models\Property;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 use Inertia\Inertia;
 
 class PropertyController extends Controller
 {
+    use ImageUpload;
+
     public function index()
     {
         return Inertia::render('Property/property-listing', [
@@ -22,6 +26,14 @@ class PropertyController extends Controller
 
     public function store(Request $request)
     {
+/* Code for image
+        $files = $request->files;
+        // $path = Storage::disk('local2')->put($files, 'public');
+        $i_get_image = $this->uploadMany($files , 'properties/');
+        dd($i_get_image);
+
+*/
+
         $data = $request->all();
         $data['user_id'] = auth()->user()->id;
         
@@ -31,8 +43,7 @@ class PropertyController extends Controller
     }
 
     public function uploadImages(Request $request){
-        $files = $request->file('image');
-        dd($files);
+        
     }
    
     public function show(Property $property)

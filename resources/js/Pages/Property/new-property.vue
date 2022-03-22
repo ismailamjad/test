@@ -11,7 +11,7 @@
                         <div class="card-body">
                             <h4 class="f-22">Add Media</h4>
                             <div class="select-images">
-                                         <UploadImages  @changed="handleImages"/>
+                                         <UploadImages  @changed="handleImages" v-model="form.files"/>
 
                             </div>
                         </div>
@@ -133,18 +133,16 @@ export default {
                     address_1: null,
                     address_2: null,
                     visit_active_time: null,
+                    // files: [],
                 }
             }
         },
         methods:{
             handleImages(files){
-                let data = new FormData();
                 console.log(files);
-                 for (let i = 0; i < files.length; i++) {
-                        data.append(files[i].name, files[i])
-                }
-                Inertia.post('uploadImages', this.data);
-                // console.log(files);
+                // this.form.files.push(...files);
+                console.log('data()',this.files);
+                // this.$inertia.post('upload-images' , this.files);
             },
             
             
@@ -152,6 +150,7 @@ export default {
 
                 this.form.image = e.target.files[0];
             },
+
             submitform(){
                 let data = new FormData();
                 data.append('title', this.form.title);
@@ -170,7 +169,8 @@ export default {
                 data.append('address_1', this.form.address_1);
                 data.append('address_2', this.form.address_2);
                 data.append('visit_active_time', this.form.visit_active_time);
-
+                // data.append('images[]', this.images);
+ 
                 this.$inertia.post(route('property.store'),data);
                 // Inertia.post(route('property.store'), data);
             }

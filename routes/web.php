@@ -38,6 +38,6 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function () {
 
     Route::resource('property', PropertyController::class);
     Route::get('property-detail/{id}', [PropertyController::class , 'property_detail']);
-    Route::post('uploadImages', [PropertyController::class , 'uploadImages']);
+    Route::post('property/upload-images', [PropertyController::class , 'uploadImages']);
 
 });
