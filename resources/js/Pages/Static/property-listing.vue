@@ -3,14 +3,20 @@
     <TopBar />
     <BottomBar />
 
-    <div class="container">
-      <div class="row py-4">
-        <div class="col-lg-3">
+    <div class="container my-md-5 my-0 position-relative">
+      <div class="row">
+       <div class="d-grid inner-wrapper ">
+                    <div class="sidebar-left ">
           <SideBar />
         </div>
-        <div class="col-lg-9">
+        <div class="content-wrapper overflow-auto">
+          <div class="d-flex gap-2 justify-content-end">
+           <div class="open-btn text-end">
+                        <button type="button" class="btn openBtn" onclick="openBtn()"> <i class="fas fa-filter"></i> Filters</button>
+                       </div>
           <div class="add-new-btn text-end mb-2">
             <a class="btn border f-18"><i class="fa fa-plus"> </i> Add New</a>
+          </div>
           </div>
           <div class="content-wrapper box-shadow bg-white border-radius-05">
             <div class="table-responsive property-tbl">
@@ -65,7 +71,7 @@
                         </td>
                     <td class="align-middle px-3">15000</td>
                     <td class="align-middle px-3"><img src="/assets/images/property/qr-code.png" /></td>
-                    <td class="align-middle px-3"> <a href="#" class="text-dark"><i class="fas fa-edit"></i></a> <a href="#" class="text-dark"><i class="far fa-trash-alt"></i></a></td>
+                    <td class="align-middle px-3"><a href="#" class="text-dark"><i class="fas fa-eye"></i></a> <a href="#" class="text-dark"><i class="fas fa-edit"></i></a> <a href="#" class="text-dark"><i class="far fa-trash-alt"></i></a></td>
                   </tr>
                     <tr>
                     <td class="align-middle px-3" scope="row">1</td>
@@ -106,7 +112,7 @@
                         </td>
                     <td class="align-middle px-3">15000</td>
                     <td class="align-middle px-3"><img src="/assets/images/property/qr-code.png" /></td>
-                    <td class="align-middle px-3"> <a href="#" class="text-dark"><i class="fas fa-edit"></i></a> <a href="#" class="text-dark"><i class="far fa-trash-alt"></i></a></td>
+                    <td class="align-middle px-3"><a href="#" class="text-dark"><i class="fas fa-eye"></i></a> <a href="#" class="text-dark"><i class="fas fa-edit"></i></a> <a href="#" class="text-dark"><i class="far fa-trash-alt"></i></a></td>
                   </tr>
                
                 </tbody>
@@ -117,6 +123,7 @@
         
         </div>
       </div>
+    </div>
     </div>
     <Footer />
   </section>
