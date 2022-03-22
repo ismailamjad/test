@@ -5,7 +5,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-2">
-                    <h2 class="f-18 mt-3">Edit Profile</h2>
+                    <h2 class="f-18 mt-4">Edit Profile</h2>
                     <div class="image-update">
                         <span>
                         <i class="fas fa-camera"></i>
