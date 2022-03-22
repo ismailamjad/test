@@ -28,15 +28,21 @@
 
 
         <!-- Scripts -->
+
         @routes
+
         <script src="{{ mix('js/app.js') }}" defer></script>
         <script src="{{asset('bootstrap/js/bootstrap.min.js') }}" defer></script>
+        <script src="{{asset('js/sidebar.js') }}" defer></script>
+
     </head>
     <body class="font-sans antialiased">
         @inertia
 
         @env ('local')
             <script src="http://localhost:3000/browser-sync/browser-sync-client.js"></script>
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
         @endenv
     </body>
 </html>

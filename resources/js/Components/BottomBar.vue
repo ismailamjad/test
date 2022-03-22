@@ -9,13 +9,13 @@
                                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                                         <ul class="navbar-nav me-auto gap-3 mb-2 mb-lg-0">
                                             <li class="nav-item">
-                                                <a class="nav-link active primary-color f-18" aria-current="page" href="#"><i class="fas fa-th"></i> Home</a>
+                                                <Link :href="route('dashboard')" class="nav-link active primary-color f-18" aria-current="page" ><i class="fas fa-th"></i> Home</Link>
                                             </li>
                                             <li class="nav-item">
-                                                <a class="nav-link secondary-color f-18" href="#"><i class="fas fa-city"></i> My Properties</a>
+                                                <Link :href="route('property.index')" class="nav-link secondary-color f-18"><i class="fas fa-city"></i> My Properties</Link>
                                             </li>
                                             <li class="nav-item">
-                                                <a class="nav-link secondary-color f-18" href="#"><i class="fas fa-user"></i> Profile</a>
+                                                <Link :href="route('profile.show')" class="nav-link secondary-color f-18" ><i class="fas fa-user"></i> Profile</Link>
                                             </li>
                                         </ul>
                                     </div>
@@ -29,7 +29,9 @@
 </template>
 
 <script>
+import { Link } from '@inertiajs/inertia-vue'
 export default {
-    name: "BottomBar"
+    name: "BottomBar",
+    components: { Link },
 }
 </script>

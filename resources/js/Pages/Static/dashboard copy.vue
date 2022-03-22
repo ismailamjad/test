@@ -3,17 +3,13 @@
        <TopBar/>
         <BottomBar/>
 
-        <div class="main-wrapper my-md-5 my-0">
-            <div class="container position-relative main-container">
-                       <div class="open-btn text-end">
-                        <button type="button" class="btn openBtn" onclick="openBtn()"> <i class="fas fa-filter"></i> Filters</button>
-                       </div>
-                <div class="d-grid inner-wrapper">
-                    <div class="sidebar-left ">
-                    
+        <div class="main-wrapper my-5">
+            <div class="container">
+                <div class="row">
+                    <div class="sidebar">
                        <SideBar />
                     </div>
-              
+                    <div class="col-lg-9 col-md-12">
                         <div class="content-wrapper">
                         
                                 <div class="grid-03 d-grid">
@@ -70,7 +66,7 @@
                     </div>
                 </div>
             </div>
-       
+        </div>
            <Footer/>
     </section>
  
@@ -80,10 +76,10 @@
   
     import Label from "@/Jetstream/Label";
     import Button from "@/Jetstream/Button";
-import TopBar from "@/Components/Header";
-import BottomBar from "@/Components/BottomBar";
-import Footer from "@/Components/Footer";
-import SideBar from "@/Components/Sidebar";
+    import TopBar from "@/Components/Header";
+    import BottomBar from "@/Components/BottomBar";
+    import Footer from "@/Components/Footer";
+    import SideBar from "@/Components/Sidebar";
 
 
 
