@@ -3,11 +3,12 @@
        <TopBar/>
         <BottomBar/>
 
-        <div class="main-wrapper my-md-5 my-0">
+        <div class="main-wrapper my-md-3 my-0">
             <div class="container position-relative main-container">
                        <div class="open-btn text-end">
                         <button type="button" class="btn openBtn" onclick="openBtn()"> <i class="fas fa-filter"></i> Filters</button>
                        </div>
+            <div class="page-title"> <h2 class="f-22 primary-color">Dashboard</h2> </div>
                 <div class="d-grid inner-wrapper">
                     <div class="sidebar-left ">
                     

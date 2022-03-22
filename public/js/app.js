@@ -5652,6 +5652,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 
 
 
@@ -7072,10 +7073,37 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
-  name: 'SiderBar',
+  name: "SiderBar",
   components: {
     VueSimpleRangeSlider: (vue_simple_range_slider__WEBPACK_IMPORTED_MODULE_0___default())
   },
@@ -40858,12 +40886,14 @@ var render = function() {
       _vm._v(" "),
       _c("BottomBar"),
       _vm._v(" "),
-      _c("div", { staticClass: "main-wrapper my-md-5 my-0" }, [
+      _c("div", { staticClass: "main-wrapper my-md-3 my-0" }, [
         _c(
           "div",
           { staticClass: "container position-relative main-container" },
           [
             _vm._m(0),
+            _vm._v(" "),
+            _vm._m(1),
             _vm._v(" "),
             _c("div", { staticClass: "d-grid inner-wrapper" }, [
               _c("div", { staticClass: "sidebar-left " }, [_c("SideBar")], 1),
@@ -40906,7 +40936,7 @@ var render = function() {
                             { staticClass: "d-flex justify-content-between" },
                             [
                               _c("div", { staticClass: "bed-count" }, [
-                                _vm._m(1, true),
+                                _vm._m(2, true),
                                 _vm._v(" "),
                                 _c("p", { staticClass: "m-0 p-0 f-16" }, [
                                   _c("span", [_vm._v(_vm._s(property.beds))]),
@@ -40915,7 +40945,7 @@ var render = function() {
                               ]),
                               _vm._v(" "),
                               _c("div", { staticClass: "bath-count" }, [
-                                _vm._m(2, true),
+                                _vm._m(3, true),
                                 _vm._v(" "),
                                 _c("p", { staticClass: "m-0 p-0 f-16" }, [
                                   _c("span", [_vm._v(_vm._s(property.baths))]),
@@ -40924,7 +40954,7 @@ var render = function() {
                               ]),
                               _vm._v(" "),
                               _c("div", { staticClass: "square-ft" }, [
-                                _vm._m(3, true),
+                                _vm._m(4, true),
                                 _vm._v(" "),
                                 _c("p", { staticClass: "m-0 p-0 f-16" }, [
                                   _c("span", [_vm._v(_vm._s(property.sqft))]),
@@ -40940,7 +40970,7 @@ var render = function() {
                   0
                 ),
                 _vm._v(" "),
-                _vm._m(4)
+                _vm._m(5)
               ])
             ])
           ]
@@ -40966,6 +40996,14 @@ var staticRenderFns = [
         },
         [_c("i", { staticClass: "fas fa-filter" }), _vm._v(" Filters")]
       )
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "page-title" }, [
+      _c("h2", { staticClass: "f-22 primary-color" }, [_vm._v("Dashboard")])
     ])
   },
   function() {
@@ -43686,7 +43724,7 @@ var render = function() {
     _c("div", { staticClass: "sidebar border-radius-05" }, [
       _c("div", { staticClass: "close-btnn text-end" }),
       _vm._v(" "),
-      _c("div", { staticClass: "property-type" }),
+      _vm._m(0),
       _vm._v(" "),
       _c(
         "div",
@@ -43711,9 +43749,9 @@ var render = function() {
         1
       ),
       _vm._v(" "),
-      _vm._m(0),
-      _vm._v(" "),
       _vm._m(1),
+      _vm._v(" "),
+      _vm._m(2),
       _vm._v(" "),
       _c(
         "div",
@@ -43723,7 +43761,9 @@ var render = function() {
             _vm._v("Property Size")
           ]),
           _vm._v(" "),
-          _c("span", [_vm._v(" 0 - 2,500 sqft")]),
+          _c("span", { staticClass: "text-white" }, [
+            _vm._v(" 0 - 2,500 sqft")
+          ]),
           _vm._v(" "),
           _c("VueSimpleRangeSlider", {
             staticStyle: { width: "300px" },
@@ -43740,11 +43780,70 @@ var render = function() {
         1
       ),
       _vm._v(" "),
-      _vm._m(2)
+      _vm._m(3)
     ])
   ])
 }
 var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "property-type mb-3" }, [
+      _c("h2", { staticClass: "f-22 white-color" }, [_vm._v("Property Type")]),
+      _vm._v(" "),
+      _c("div", { staticClass: "d-flex gap-3" }, [
+        _c("input", {
+          attrs: { id: "homes", type: "radio", name: "radio", value: "Homes" }
+        }),
+        _vm._v(" "),
+        _c(
+          "label",
+          {
+            staticClass: "text-center text-white border-radius-05",
+            attrs: { for: "homes" }
+          },
+          [_vm._v("Homes")]
+        ),
+        _vm._v(" "),
+        _c("input", {
+          attrs: {
+            id: "apartment",
+            type: "radio",
+            name: "radio",
+            value: "Apartment"
+          }
+        }),
+        _vm._v(" "),
+        _c(
+          "label",
+          {
+            staticClass: "text-center text-white border-radius-05",
+            attrs: { for: "apartment" }
+          },
+          [_vm._v("Apartment")]
+        ),
+        _vm._v(" "),
+        _c("input", {
+          attrs: {
+            id: "commercial",
+            type: "radio",
+            name: "radio",
+            value: "Commercial"
+          }
+        }),
+        _vm._v(" "),
+        _c(
+          "label",
+          {
+            staticClass: "text-center text-white border-radius-05",
+            attrs: { for: "commercial" }
+          },
+          [_vm._v("Commercial")]
+        )
+      ])
+    ])
+  },
   function() {
     var _vm = this
     var _h = _vm.$createElement
@@ -43811,14 +43910,10 @@ var staticRenderFns = [
           _c(
             "label",
             {
-              staticClass: "form-check-label white-color ",
+              staticClass: "form-check-label white-color",
               attrs: { for: "flexRadioDefault1" }
             },
-            [
-              _vm._v(
-                "\n                                          Ready to Move\n                                      "
-              )
-            ]
+            [_vm._v("\n          Ready to Move\n        ")]
           ),
           _vm._v(" "),
           _c("input", {
@@ -43842,11 +43937,7 @@ var staticRenderFns = [
               staticClass: "form-check-label white-color",
               attrs: { for: "flexRadioDefault2" }
             },
-            [
-              _vm._v(
-                "\n                                          Within 06 Months\n                                      "
-              )
-            ]
+            [_vm._v("\n          Within 06 Months\n        ")]
           ),
           _vm._v(" "),
           _c("input", {
@@ -43868,14 +43959,10 @@ var staticRenderFns = [
           _c(
             "label",
             {
-              staticClass: "form-check-label white-color ",
+              staticClass: "form-check-label white-color",
               attrs: { for: "flexRadioDefault1" }
             },
-            [
-              _vm._v(
-                "\n                                             Within 01 Year\n                                         "
-              )
-            ]
+            [_vm._v("\n          Within 01 Year\n        ")]
           ),
           _vm._v(" "),
           _c("input", {
@@ -43896,14 +43983,10 @@ var staticRenderFns = [
           _c(
             "label",
             {
-              staticClass: "form-check-label white-color ",
+              staticClass: "form-check-label white-color",
               attrs: { for: "flexRadioDefault1" }
             },
-            [
-              _vm._v(
-                "\n                                             More than 01 Year\n                                         "
-              )
-            ]
+            [_vm._v("\n          More than 01 Year\n        ")]
           ),
           _vm._v(" "),
           _c("input", {
@@ -43933,7 +44016,7 @@ var staticRenderFns = [
           _vm._v("Reset Filters")
         ]),
         _vm._v(" "),
-        _c("button", { staticClass: "btn btn-light px-4" }, [_vm._v("Apply ")])
+        _c("button", { staticClass: "btn btn-light px-4" }, [_vm._v("Apply")])
       ]
     )
   }
