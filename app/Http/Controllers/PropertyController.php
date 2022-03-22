@@ -65,4 +65,12 @@ class PropertyController extends Controller
         Property::find($id)->delete();
         return redirect()->route('property.index');
     }
+
+    public function property_detail($id){
+        return Inertia::render('Property/propertydetail', [
+            "property" => Property::find($id),
+            "id" => $id,
+        ]);
+        
+    }
 }
