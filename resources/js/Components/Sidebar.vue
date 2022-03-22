@@ -2,6 +2,7 @@
     
      <div class="left-wrapper">
                             <div class="sidebar border-radius-05">
+                                <div class="close-btnn text-end"></div>
                                 <div class="property-type">
 
                                 </div>

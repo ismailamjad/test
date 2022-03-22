@@ -5410,6 +5410,153 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/Pages/Static/dashboard copy.vue?vue&type=script&lang=js&":
+/*!***********************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/Pages/Static/dashboard copy.vue?vue&type=script&lang=js& ***!
+  \***********************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _Jetstream_Label__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @/Jetstream/Label */ "./resources/js/Jetstream/Label.vue");
+/* harmony import */ var _Jetstream_Button__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @/Jetstream/Button */ "./resources/js/Jetstream/Button.vue");
+/* harmony import */ var _components_Header__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @/components/Header */ "./resources/js/components/Header.vue");
+/* harmony import */ var _components_BottomBar__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @/components/BottomBar */ "./resources/js/components/BottomBar.vue");
+/* harmony import */ var _components_Sidebar__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @/components/Sidebar */ "./resources/js/components/Sidebar.vue");
+/* harmony import */ var _components_Footer__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @/components/Footer */ "./resources/js/components/Footer.vue");
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+
+
+
+
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  name: 'main',
+  components: {
+    Button: _Jetstream_Button__WEBPACK_IMPORTED_MODULE_1__["default"],
+    Label: _Jetstream_Label__WEBPACK_IMPORTED_MODULE_0__["default"],
+    TopBar: _components_Header__WEBPACK_IMPORTED_MODULE_2__["default"],
+    BottomBar: _components_BottomBar__WEBPACK_IMPORTED_MODULE_3__["default"],
+    SideBar: _components_Sidebar__WEBPACK_IMPORTED_MODULE_4__["default"],
+    Footer: _components_Footer__WEBPACK_IMPORTED_MODULE_5__["default"]
+  },
+  data: function data() {
+    return {
+      range: [20, 1000],
+      number: 10,
+      size: [20, 10000],
+      properties: [{
+        image: "/assets/images/dashboard/img-01.jpg",
+        price: 150000,
+        description: "Keas 69 Str. 15234, Chalandri Athens, New York",
+        beds: 4,
+        baths: 3,
+        sqft: 2220
+      }, {
+        image: "/assets/images/dashboard/img-02.jpg",
+        price: 110000,
+        description: "Keas 69 Str. 15234, Chalandri Athens, New York",
+        beds: 4,
+        baths: 3,
+        sqft: 2220
+      }, {
+        image: "/assets/images/dashboard/img-03.jpg",
+        price: 120000,
+        description: "Keas 69 Str. 15234, Chalandri Athens, New York",
+        beds: 4,
+        baths: 3,
+        sqft: 2220
+      }, {
+        image: "/assets/images/dashboard/img-01.jpg",
+        price: 150000,
+        description: "Keas 69 Str. 15234, Chalandri Athens, New York",
+        beds: 4,
+        baths: 3,
+        sqft: 2220
+      }]
+    };
+  }
+});
+
+/***/ }),
+
 /***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/Pages/Static/dashboard.vue?vue&type=script&lang=js&":
 /*!******************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/Pages/Static/dashboard.vue?vue&type=script&lang=js& ***!
@@ -5427,6 +5574,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_BottomBar__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @/components/BottomBar */ "./resources/js/components/BottomBar.vue");
 /* harmony import */ var _components_Sidebar__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @/components/Sidebar */ "./resources/js/components/Sidebar.vue");
 /* harmony import */ var _components_Footer__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @/components/Footer */ "./resources/js/components/Footer.vue");
+//
+//
+//
+//
 //
 //
 //
@@ -5897,6 +6048,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_BottomBar__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @/components/BottomBar */ "./resources/js/components/BottomBar.vue");
 /* harmony import */ var _components_Footer__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @/components/Footer */ "./resources/js/components/Footer.vue");
 /* harmony import */ var _components_Sidebar__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @/components/Sidebar */ "./resources/js/components/Sidebar.vue");
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -6722,6 +6880,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var vue_simple_range_slider__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue-simple-range-slider */ "./node_modules/vue-simple-range-slider/dist/vueSimpleRangeSlider.common.js");
 /* harmony import */ var vue_simple_range_slider__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(vue_simple_range_slider__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var vue_simple_range_slider_dist_vueSimpleRangeSlider_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! vue-simple-range-slider/dist/vueSimpleRangeSlider.css */ "./node_modules/vue-simple-range-slider/dist/vueSimpleRangeSlider.css");
+//
 //
 //
 //
@@ -31538,6 +31697,45 @@ component.options.__file = "resources/js/Pages/Static/blank.vue"
 
 /***/ }),
 
+/***/ "./resources/js/Pages/Static/dashboard copy.vue":
+/*!******************************************************!*\
+  !*** ./resources/js/Pages/Static/dashboard copy.vue ***!
+  \******************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _dashboard_copy_vue_vue_type_template_id_9f04e72e___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./dashboard copy.vue?vue&type=template&id=9f04e72e& */ "./resources/js/Pages/Static/dashboard copy.vue?vue&type=template&id=9f04e72e&");
+/* harmony import */ var _dashboard_copy_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./dashboard copy.vue?vue&type=script&lang=js& */ "./resources/js/Pages/Static/dashboard copy.vue?vue&type=script&lang=js&");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! !../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+;
+var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _dashboard_copy_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _dashboard_copy_vue_vue_type_template_id_9f04e72e___WEBPACK_IMPORTED_MODULE_0__.render,
+  _dashboard_copy_vue_vue_type_template_id_9f04e72e___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns,
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/Pages/Static/dashboard copy.vue"
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (component.exports);
+
+/***/ }),
+
 /***/ "./resources/js/Pages/Static/dashboard.vue":
 /*!*************************************************!*\
   !*** ./resources/js/Pages/Static/dashboard.vue ***!
@@ -32664,6 +32862,22 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./resources/js/Pages/Static/dashboard copy.vue?vue&type=script&lang=js&":
+/*!*******************************************************************************!*\
+  !*** ./resources/js/Pages/Static/dashboard copy.vue?vue&type=script&lang=js& ***!
+  \*******************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_dashboard_copy_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./dashboard copy.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/Pages/Static/dashboard copy.vue?vue&type=script&lang=js&");
+ /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_dashboard_copy_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
 /***/ "./resources/js/Pages/Static/dashboard.vue?vue&type=script&lang=js&":
 /*!**************************************************************************!*\
   !*** ./resources/js/Pages/Static/dashboard.vue?vue&type=script&lang=js& ***!
@@ -33710,6 +33924,23 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_blank_vue_vue_type_template_id_971e01c8___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
 /* harmony export */ });
 /* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_blank_vue_vue_type_template_id_971e01c8___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./blank.vue?vue&type=template&id=971e01c8& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/Pages/Static/blank.vue?vue&type=template&id=971e01c8&");
+
+
+/***/ }),
+
+/***/ "./resources/js/Pages/Static/dashboard copy.vue?vue&type=template&id=9f04e72e&":
+/*!*************************************************************************************!*\
+  !*** ./resources/js/Pages/Static/dashboard copy.vue?vue&type=template&id=9f04e72e& ***!
+  \*************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_dashboard_copy_vue_vue_type_template_id_9f04e72e___WEBPACK_IMPORTED_MODULE_0__.render),
+/* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_dashboard_copy_vue_vue_type_template_id_9f04e72e___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
+/* harmony export */ });
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_dashboard_copy_vue_vue_type_template_id_9f04e72e___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./dashboard copy.vue?vue&type=template&id=9f04e72e& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/Pages/Static/dashboard copy.vue?vue&type=template&id=9f04e72e&");
 
 
 /***/ }),
@@ -40270,6 +40501,178 @@ render._withStripped = true
 
 /***/ }),
 
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/Pages/Static/dashboard copy.vue?vue&type=template&id=9f04e72e&":
+/*!****************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/Pages/Static/dashboard copy.vue?vue&type=template&id=9f04e72e& ***!
+  \****************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* binding */ render),
+/* harmony export */   "staticRenderFns": () => (/* binding */ staticRenderFns)
+/* harmony export */ });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "section",
+    { staticClass: "overflow-hidden" },
+    [
+      _c("TopBar"),
+      _vm._v(" "),
+      _c("BottomBar"),
+      _vm._v(" "),
+      _c("div", { staticClass: "main-wrapper my-5" }, [
+        _c("div", { staticClass: "container" }, [
+          _c("div", { staticClass: "row" }, [
+            _c("div", { staticClass: "sidebar" }, [_c("SideBar")], 1),
+            _vm._v(" "),
+            _c("div", { staticClass: "col-lg-9 col-md-12" }, [
+              _c("div", { staticClass: "content-wrapper" }, [
+                _c(
+                  "div",
+                  { staticClass: "grid-03 d-grid" },
+                  _vm._l(_vm.properties, function(property, index) {
+                    return _c(
+                      "div",
+                      {
+                        key: index,
+                        staticClass: "card-box card-shadow border-radius-05"
+                      },
+                      [
+                        _c("div", { staticClass: "property-img" }, [
+                          _c("img", {
+                            staticClass: "img-fluid",
+                            attrs: { src: property.image }
+                          })
+                        ]),
+                        _vm._v(" "),
+                        _c("div", { staticClass: "content-box p-3" }, [
+                          _c("div", { staticClass: "property-price mb-2" }, [
+                            _c("h3", { staticClass: "f-22 mb-0" }, [
+                              _c("span", [_vm._v("$")]),
+                              _vm._v(_vm._s(property.price))
+                            ])
+                          ]),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "property-desc mb-2" }, [
+                            _c("p", { staticClass: "m-0 p-0 f-18" }, [
+                              _vm._v(_vm._s(property.description))
+                            ])
+                          ]),
+                          _vm._v(" "),
+                          _c(
+                            "div",
+                            { staticClass: "d-flex justify-content-between" },
+                            [
+                              _c("div", { staticClass: "bed-count" }, [
+                                _vm._m(0, true),
+                                _vm._v(" "),
+                                _c("p", { staticClass: "m-0 p-0 f-16" }, [
+                                  _c("span", [_vm._v(_vm._s(property.beds))]),
+                                  _vm._v(" beds")
+                                ])
+                              ]),
+                              _vm._v(" "),
+                              _c("div", { staticClass: "bath-count" }, [
+                                _vm._m(1, true),
+                                _vm._v(" "),
+                                _c("p", { staticClass: "m-0 p-0 f-16" }, [
+                                  _c("span", [_vm._v(_vm._s(property.baths))]),
+                                  _vm._v(" baths")
+                                ])
+                              ]),
+                              _vm._v(" "),
+                              _c("div", { staticClass: "square-ft" }, [
+                                _vm._m(2, true),
+                                _vm._v(" "),
+                                _c("p", { staticClass: "m-0 p-0 f-16" }, [
+                                  _c("span", [_vm._v(_vm._s(property.sqft))]),
+                                  _vm._v(" sqft")
+                                ])
+                              ])
+                            ]
+                          )
+                        ])
+                      ]
+                    )
+                  }),
+                  0
+                ),
+                _vm._v(" "),
+                _vm._m(3)
+              ])
+            ])
+          ])
+        ])
+      ]),
+      _vm._v(" "),
+      _c("Footer")
+    ],
+    1
+  )
+}
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "icon" }, [
+      _c("i", { staticClass: "fas fa-bed" })
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "icon" }, [
+      _c("i", { staticClass: "fas fa-bath" })
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "icon" }, [
+      _c("i", { staticClass: "fas fa-draw-square" })
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "row mt-4" }, [
+      _c("div", { staticClass: "col-md-3" }, [
+        _c("div", { staticClass: "map card-shadow" }, [
+          _c("iframe", {
+            staticClass: "w-100",
+            staticStyle: { border: "0" },
+            attrs: {
+              src:
+                "https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d217853.49198912922!2d74.50393540029297!3d31.442745765609295!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2s!4v1647444406305!5m2!1sen!2s",
+              height: "300",
+              allowfullscreen: "",
+              loading: "lazy"
+            }
+          })
+        ])
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "col-md-9" }, [
+        _c("div", { staticClass: "map card-shadow" })
+      ])
+    ])
+  }
+]
+render._withStripped = true
+
+
+
+/***/ }),
+
 /***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/Pages/Static/dashboard.vue?vue&type=template&id=1befa05c&":
 /*!***********************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/Pages/Static/dashboard.vue?vue&type=template&id=1befa05c& ***!
@@ -40288,103 +40691,99 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c(
     "section",
+    { staticClass: "overflow-hidden" },
     [
       _c("TopBar"),
       _vm._v(" "),
       _c("BottomBar"),
       _vm._v(" "),
-      _c("div", { staticClass: "main-wrapper my-5" }, [
-        _c("div", { staticClass: "container" }, [
-          _c("div", { staticClass: "row" }, [
-            _c(
-              "div",
-              { staticClass: "col-lg-3 d-lg-block d-none" },
-              [_c("SideBar")],
-              1
-            ),
+      _c("div", { staticClass: "main-wrapper my-md-5 my-0" }, [
+        _c(
+          "div",
+          { staticClass: "container position-relative main-container" },
+          [
+            _vm._m(0),
             _vm._v(" "),
-            _c("div", { staticClass: "col-lg-9 col-md-12" }, [
+            _c("div", { staticClass: "d-grid inner-wrapper" }, [
+              _c("div", { staticClass: "sidebar-left " }, [_c("SideBar")], 1),
+              _vm._v(" "),
               _c("div", { staticClass: "content-wrapper" }, [
-                _c("div", { staticClass: "row" }, [
-                  _c(
-                    "div",
-                    { staticClass: "grid-03 d-grid" },
-                    _vm._l(_vm.properties, function(property, index) {
-                      return _c(
-                        "div",
-                        {
-                          key: index,
-                          staticClass: "card-box card-shadow border-radius-05"
-                        },
-                        [
-                          _c("div", { staticClass: "property-img" }, [
-                            _c("img", {
-                              staticClass: "img-fluid",
-                              attrs: { src: property.image }
-                            })
+                _c(
+                  "div",
+                  { staticClass: "grid-03 d-grid" },
+                  _vm._l(_vm.properties, function(property, index) {
+                    return _c(
+                      "div",
+                      {
+                        key: index,
+                        staticClass: "card-box card-shadow border-radius-05"
+                      },
+                      [
+                        _c("div", { staticClass: "property-img" }, [
+                          _c("img", {
+                            staticClass: "img-fluid",
+                            attrs: { src: property.image }
+                          })
+                        ]),
+                        _vm._v(" "),
+                        _c("div", { staticClass: "content-box p-3" }, [
+                          _c("div", { staticClass: "property-price mb-2" }, [
+                            _c("h3", { staticClass: "f-22 mb-0" }, [
+                              _c("span", [_vm._v("$")]),
+                              _vm._v(_vm._s(property.price))
+                            ])
                           ]),
                           _vm._v(" "),
-                          _c("div", { staticClass: "content-box p-3" }, [
-                            _c("div", { staticClass: "property-price mb-2" }, [
-                              _c("h3", { staticClass: "f-22 mb-0" }, [
-                                _c("span", [_vm._v("$")]),
-                                _vm._v(_vm._s(property.price))
-                              ])
-                            ]),
-                            _vm._v(" "),
-                            _c("div", { staticClass: "property-desc mb-2" }, [
-                              _c("p", { staticClass: "m-0 p-0 f-18" }, [
-                                _vm._v(_vm._s(property.description))
-                              ])
-                            ]),
-                            _vm._v(" "),
-                            _c(
-                              "div",
-                              { staticClass: "d-flex justify-content-between" },
-                              [
-                                _c("div", { staticClass: "bed-count" }, [
-                                  _vm._m(0, true),
-                                  _vm._v(" "),
-                                  _c("p", { staticClass: "m-0 p-0 f-16" }, [
-                                    _c("span", [_vm._v(_vm._s(property.beds))]),
-                                    _vm._v(" beds")
-                                  ])
-                                ]),
+                          _c("div", { staticClass: "property-desc mb-2" }, [
+                            _c("p", { staticClass: "m-0 p-0 f-18" }, [
+                              _vm._v(_vm._s(property.description))
+                            ])
+                          ]),
+                          _vm._v(" "),
+                          _c(
+                            "div",
+                            { staticClass: "d-flex justify-content-between" },
+                            [
+                              _c("div", { staticClass: "bed-count" }, [
+                                _vm._m(1, true),
                                 _vm._v(" "),
-                                _c("div", { staticClass: "bath-count" }, [
-                                  _vm._m(1, true),
-                                  _vm._v(" "),
-                                  _c("p", { staticClass: "m-0 p-0 f-16" }, [
-                                    _c("span", [
-                                      _vm._v(_vm._s(property.baths))
-                                    ]),
-                                    _vm._v(" baths")
-                                  ])
-                                ]),
-                                _vm._v(" "),
-                                _c("div", { staticClass: "square-ft" }, [
-                                  _vm._m(2, true),
-                                  _vm._v(" "),
-                                  _c("p", { staticClass: "m-0 p-0 f-16" }, [
-                                    _c("span", [_vm._v(_vm._s(property.sqft))]),
-                                    _vm._v(" sqft")
-                                  ])
+                                _c("p", { staticClass: "m-0 p-0 f-16" }, [
+                                  _c("span", [_vm._v(_vm._s(property.beds))]),
+                                  _vm._v(" beds")
                                 ])
-                              ]
-                            )
-                          ])
-                        ]
-                      )
-                    }),
-                    0
-                  )
-                ]),
+                              ]),
+                              _vm._v(" "),
+                              _c("div", { staticClass: "bath-count" }, [
+                                _vm._m(2, true),
+                                _vm._v(" "),
+                                _c("p", { staticClass: "m-0 p-0 f-16" }, [
+                                  _c("span", [_vm._v(_vm._s(property.baths))]),
+                                  _vm._v(" baths")
+                                ])
+                              ]),
+                              _vm._v(" "),
+                              _c("div", { staticClass: "square-ft" }, [
+                                _vm._m(3, true),
+                                _vm._v(" "),
+                                _c("p", { staticClass: "m-0 p-0 f-16" }, [
+                                  _c("span", [_vm._v(_vm._s(property.sqft))]),
+                                  _vm._v(" sqft")
+                                ])
+                              ])
+                            ]
+                          )
+                        ])
+                      ]
+                    )
+                  }),
+                  0
+                ),
                 _vm._v(" "),
-                _vm._m(3)
+                _vm._m(4)
               ])
             ])
-          ])
-        ])
+          ]
+        )
       ]),
       _vm._v(" "),
       _c("Footer")
@@ -40393,6 +40792,21 @@ var render = function() {
   )
 }
 var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "open-btn text-end" }, [
+      _c(
+        "button",
+        {
+          staticClass: "btn openBtn",
+          attrs: { type: "button", onclick: "openBtn()" }
+        },
+        [_c("i", { staticClass: "fas fa-filter" }), _vm._v(" Filters")]
+      )
+    ])
+  },
   function() {
     var _vm = this
     var _h = _vm.$createElement
@@ -41024,11 +41438,13 @@ var render = function() {
       _vm._v(" "),
       _c("BottomBar"),
       _vm._v(" "),
-      _c("div", { staticClass: "container" }, [
-        _c("div", { staticClass: "row py-4" }, [
-          _c("div", { staticClass: "col-lg-3" }, [_c("SideBar")], 1),
-          _vm._v(" "),
-          _vm._m(0)
+      _c("div", { staticClass: "container my-md-5 my-0 position-relative" }, [
+        _c("div", { staticClass: "row" }, [
+          _c("div", { staticClass: "d-grid inner-wrapper " }, [
+            _c("div", { staticClass: "sidebar-left " }, [_c("SideBar")], 1),
+            _vm._v(" "),
+            _vm._m(0)
+          ])
         ])
       ]),
       _vm._v(" "),
@@ -41042,11 +41458,24 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "col-lg-9" }, [
-      _c("div", { staticClass: "add-new-btn text-end mb-2" }, [
-        _c("a", { staticClass: "btn border f-18" }, [
-          _c("i", { staticClass: "fa fa-plus" }),
-          _vm._v(" Add New")
+    return _c("div", { staticClass: "content-wrapper overflow-auto" }, [
+      _c("div", { staticClass: "d-flex gap-2 justify-content-end" }, [
+        _c("div", { staticClass: "open-btn text-end" }, [
+          _c(
+            "button",
+            {
+              staticClass: "btn openBtn",
+              attrs: { type: "button", onclick: "openBtn()" }
+            },
+            [_c("i", { staticClass: "fas fa-filter" }), _vm._v(" Filters")]
+          )
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "add-new-btn text-end mb-2" }, [
+          _c("a", { staticClass: "btn border f-18" }, [
+            _c("i", { staticClass: "fa fa-plus" }),
+            _vm._v(" Add New")
+          ])
         ])
       ]),
       _vm._v(" "),
@@ -42934,6 +43363,8 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c("div", { staticClass: "left-wrapper" }, [
     _c("div", { staticClass: "sidebar border-radius-05" }, [
+      _c("div", { staticClass: "close-btnn text-end" }),
+      _vm._v(" "),
       _c("div", { staticClass: "property-type" }),
       _vm._v(" "),
       _c(
@@ -60990,6 +61421,8 @@ var map = {
 	"./Static/blank": "./resources/js/Pages/Static/blank.vue",
 	"./Static/blank.vue": "./resources/js/Pages/Static/blank.vue",
 	"./Static/dashboard": "./resources/js/Pages/Static/dashboard.vue",
+	"./Static/dashboard copy": "./resources/js/Pages/Static/dashboard copy.vue",
+	"./Static/dashboard copy.vue": "./resources/js/Pages/Static/dashboard copy.vue",
 	"./Static/dashboard.vue": "./resources/js/Pages/Static/dashboard.vue",
 	"./Static/data": "./resources/js/Pages/Static/data.js",
 	"./Static/data.js": "./resources/js/Pages/Static/data.js",

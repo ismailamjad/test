@@ -1,6 +1,6 @@
 .sidebar{
     background: transparent linear-gradient(180deg, #485922 0%, #0D0D0D 100%) 0% 0% no-repeat padding-box;
-    padding: 30px !important;
+    padding: 15px !important;
 }
 .sidebar .form-check-input[type=radio] {
     border-radius: 50%;
@@ -9,4 +9,61 @@
 }
 .sidebar .form-check-input:checked{
     background: #fff;
+}
+
+.inner-wrapper {
+    grid-template-columns: 5fr 95fr !important;
+    gap: 20px !important;
+}
+.open-btn{
+    display: none !important;
+}
+.close-btnn{
+    display: none;
+}
+@media (max-width: 767px) {
+    .left-wrapper{
+        width: 0px ;
+        position: absolute;
+        display: none;
+        top: 0px;
+        left: 0px;
+        height: 100vh;
+       background: transparent linear-gradient(180deg, #485922 0%, #0D0D0D 100%) 0% 0% no-repeat padding-box;
+    }
+    .close-btnn{
+        display:block;
+    }
+    .sidebar {
+        /* background: transparent !important; */
+    }
+    .open-btn{
+        display: block !important;
+    }
+   .open{
+       display: block ;
+       width: 300px ;
+       animation: animate linear !important;
+       
+
+   }
+   .close{
+       display: none ;
+   }
+    .inner-wrapper {
+        grid-template-columns:1fr !important;
+    }
+    .bottom-bar{margin-top:0px !important; display: none}
+}
+
+@keyframes  animate {
+    0% {
+        width: 0px; 
+    }
+    50% {
+         width: 150px;
+    }
+    100% {
+        width: 300px;
+   }
 }

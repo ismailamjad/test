@@ -3,14 +3,20 @@
     <TopBar />
     <BottomBar />
 
-    <div class="container">
-      <div class="row py-4">
-        <div class="col-lg-3">
+    <div class="container my-md-5 my-0 position-relative">
+      <div class="row">
+       <div class="d-grid inner-wrapper ">
+                    <div class="sidebar-left ">
           <SideBar />
         </div>
-        <div class="col-lg-9">
+        <div class="content-wrapper overflow-auto">
+          <div class="d-flex gap-2 justify-content-end">
+           <div class="open-btn text-end">
+                        <button type="button" class="btn openBtn" onclick="openBtn()"> <i class="fas fa-filter"></i> Filters</button>
+                       </div>
           <div class="add-new-btn text-end mb-2">
             <a class="btn border f-18"><i class="fa fa-plus"> </i> Add New</a>
+          </div>
           </div>
           <div class="content-wrapper box-shadow bg-white border-radius-05">
             <div class="table-responsive property-tbl">
@@ -117,6 +123,7 @@
         
         </div>
       </div>
+    </div>
     </div>
     <Footer />
   </section>
