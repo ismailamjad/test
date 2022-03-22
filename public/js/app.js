@@ -5968,7 +5968,7 @@ __webpack_require__.r(__webpack_exports__);
     handleImages: function handleImages(files) {
       console.log(files); // this.form.files.push(...files);
 
-      console.log('data()', this.files); // this.$inertia.post('upload-images' , this.files);
+      console.log('data()', this.files);
     },
     uploadimage: function uploadimage(e) {
       this.form.image = e.target.files[0];
@@ -5992,7 +5992,7 @@ __webpack_require__.r(__webpack_exports__);
       data.append('address_2', this.form.address_2);
       data.append('visit_active_time', this.form.visit_active_time); // data.append('images[]', this.images);
 
-      this.$inertia.post(route('property.store'), data); // Inertia.post(route('property.store'), data);
+      this.$inertia.post(route('property.store'), data);
     }
   }
 });

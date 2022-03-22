@@ -142,7 +142,6 @@ export default {
                 console.log(files);
                 // this.form.files.push(...files);
                 console.log('data()',this.files);
-                // this.$inertia.post('upload-images' , this.files);
             },
             
             
@@ -172,7 +171,6 @@ export default {
                 // data.append('images[]', this.images);
  
                 this.$inertia.post(route('property.store'),data);
-                // Inertia.post(route('property.store'), data);
             }
         }           
 }
