@@ -84,7 +84,7 @@
                                         style="width: 300px"
                                         :min="0"
                                         :max="1000000"
-                                        :logarithmic="false"
+                                        :logarithmic="true"
                                         v-model="size"
 
 

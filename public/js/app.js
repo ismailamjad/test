@@ -43727,7 +43727,7 @@ var render = function() {
           _vm._v(" "),
           _c("VueSimpleRangeSlider", {
             staticStyle: { width: "300px" },
-            attrs: { min: 0, max: 1000000, logarithmic: false },
+            attrs: { min: 0, max: 1000000, logarithmic: true },
             model: {
               value: _vm.size,
               callback: function($$v) {
