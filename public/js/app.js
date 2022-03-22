@@ -41945,6 +41945,12 @@ var staticRenderFns = [
                     _c(
                       "a",
                       { staticClass: "text-dark", attrs: { href: "#" } },
+                      [_c("i", { staticClass: "fas fa-eye" })]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "a",
+                      { staticClass: "text-dark", attrs: { href: "#" } },
                       [_c("i", { staticClass: "fas fa-edit" })]
                     ),
                     _vm._v(" "),
@@ -42054,6 +42060,12 @@ var staticRenderFns = [
                   ]),
                   _vm._v(" "),
                   _c("td", { staticClass: "align-middle px-3" }, [
+                    _c(
+                      "a",
+                      { staticClass: "text-dark", attrs: { href: "#" } },
+                      [_c("i", { staticClass: "fas fa-eye" })]
+                    ),
+                    _vm._v(" "),
                     _c(
                       "a",
                       { staticClass: "text-dark", attrs: { href: "#" } },

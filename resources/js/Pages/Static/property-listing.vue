@@ -71,7 +71,7 @@
                         </td>
                     <td class="align-middle px-3">15000</td>
                     <td class="align-middle px-3"><img src="/assets/images/property/qr-code.png" /></td>
-                    <td class="align-middle px-3"> <a href="#" class="text-dark"><i class="fas fa-edit"></i></a> <a href="#" class="text-dark"><i class="far fa-trash-alt"></i></a></td>
+                    <td class="align-middle px-3"><a href="#" class="text-dark"><i class="fas fa-eye"></i></a> <a href="#" class="text-dark"><i class="fas fa-edit"></i></a> <a href="#" class="text-dark"><i class="far fa-trash-alt"></i></a></td>
                   </tr>
                     <tr>
                     <td class="align-middle px-3" scope="row">1</td>
@@ -112,7 +112,7 @@
                         </td>
                     <td class="align-middle px-3">15000</td>
                     <td class="align-middle px-3"><img src="/assets/images/property/qr-code.png" /></td>
-                    <td class="align-middle px-3"> <a href="#" class="text-dark"><i class="fas fa-edit"></i></a> <a href="#" class="text-dark"><i class="far fa-trash-alt"></i></a></td>
+                    <td class="align-middle px-3"><a href="#" class="text-dark"><i class="fas fa-eye"></i></a> <a href="#" class="text-dark"><i class="fas fa-edit"></i></a> <a href="#" class="text-dark"><i class="far fa-trash-alt"></i></a></td>
                   </tr>
                
                 </tbody>

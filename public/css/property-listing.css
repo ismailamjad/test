@@ -14,5 +14,8 @@
 .mobile-width{
 width: 300px !important;
 }
+.property-tbl .table{
+    width: 900px !important;
+}
 
 }
