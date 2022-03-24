@@ -46,7 +46,34 @@
                                         <textarea class="form-control f-16" rows="4" v-model="editform.Bio"  placeholder="Describe"></textarea>
                                     </div>
                                 </div>
-                                <button type="submit" class="btn btn-primary">Update</button>
+                                <button type="submit" class="btn btn-primary">Update Profile</button>
+                            </form>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="col-lg-12">
+                    <h2 class="f-18 mt-3">Update Password</h2>
+                    <div class="card mt-4 mb-4">
+                        <div class="card-body">
+                            <form class="detail-form" @submit.prevent="updatePassword()">
+                                <div class="row">
+                                    <div class="form-group col-md-4">
+                                        <label class="f-18 mb-2 mt-3">Current Password</label>
+                                        <input  id="current_password" type="password" class="form-control f-16" v-model="updatepasswordForm.current_password" >
+                                    </div>
+
+                                    <div class="form-group col-md-4">
+                                        <label class="f-18 mb-2 mt-3">New Password</label>
+                                        <input  id="password" type="password"  class="form-control f-16" v-model="updatepasswordForm.password">
+                                    </div>
+                                    <div class="form-group col-md-4">
+                                        <label class="f-18 mb-2 mt-3">Confirm Password</label>
+                                        <input id="password_confirmation" type="password" class="form-control f-16"  v-model="updatepasswordForm.password_confirmation" >
+                                    </div>
+                                </div>
+                                <button type="submit" class="btn btn-primary">Update Password</button>
                             </form>
                         </div>
                     </div>
@@ -79,7 +106,13 @@ import Footer from "@/Components/Footer";
                     email: null,
                     specialized_in: null,
                     Bio: null,
-                }
+                },
+                 updatepasswordForm:this.$inertia.form({
+                    current_password: '',
+                    password: '',
+                    password_confirmation: '',
+                }),
+
             }
         },
         methods:{
@@ -91,9 +124,25 @@ import Footer from "@/Components/Footer";
                 this.editform.email = this.profile.email;
                 this.editform.specialized_in = this.profile.specialized_in;
                 this.editform.Bio = this.profile.Bio;
-        
             },
+             updatePassword() {
+                this.updatepasswordForm.put(route('user-password.update'), {
+                    errorBag: 'updatePassword',
+                    preserveScroll: true,
+                    onSuccess: () => this.form.reset(),
+                    onError: () => {
+                        if (this.form.errors.password) {
+                            this.form.reset('password', 'password_confirmation')
+                            this.$refs.password.focus()
+                        }
 
+                        if (this.form.errors.current_password) {
+                            this.form.reset('current_password')
+                            this.$refs.current_password.focus()
+                        }
+                    }
+                })
+            },
             updateUserInfo(){
                 this.$inertia.put(route('user.update' , this.id),this.editform);
             }

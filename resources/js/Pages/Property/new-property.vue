@@ -133,17 +133,19 @@ export default {
                     address_1: null,
                     address_2: null,
                     visit_active_time: null,
-                    // files: [],
+                    // images: [],
                 }
             }
         },
         methods:{
             handleImages(files){
-                console.log(files);
+                // console.log(files);
                 // this.form.files.push(...files);
-                console.log('data()',this.files);
+
+                
+            //    this.images = files;
+            //     console.log('data()',this.images);
             },
-            
             
             uploadimage(e){
 
@@ -168,7 +170,8 @@ export default {
                 data.append('address_1', this.form.address_1);
                 data.append('address_2', this.form.address_2);
                 data.append('visit_active_time', this.form.visit_active_time);
-                // data.append('images[]', this.images);
+
+                
  
                 this.$inertia.post(route('property.store'),data);
             }

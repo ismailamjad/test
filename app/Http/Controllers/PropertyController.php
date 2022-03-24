@@ -7,15 +7,20 @@ use App\Models\Property;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 use Inertia\Inertia;
+use SimpleSoftwareIO\QrCode\Facades\QrCode;
 
 class PropertyController extends Controller
 {
-    use ImageUpload;
+    // use ImageUpload;
 
     public function index()
     {
+        $qr_code =  QrCode::size(200)->generate('W3Adda dsLaravel Tutorial');
+
+        // return $qr_code;
         return Inertia::render('Property/property-listing', [
-            "property" => Property::get()
+            "properties" => Property::get(),
+            // "qr" => $qr_code
         ]);
     }
 
@@ -33,6 +38,7 @@ class PropertyController extends Controller
         dd($i_get_image);
 
 */
+
 
         $data = $request->all();
         $data['user_id'] = auth()->user()->id;

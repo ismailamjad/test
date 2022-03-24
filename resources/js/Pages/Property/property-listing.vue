@@ -26,7 +26,7 @@
                   </tr>
                 </thead>
                 <tbody >
-                  <tr class="px-3" v-for="(propert, index) in property" :key="propert.id">
+                  <tr class="px-3" v-for="(property, index) in properties" :key="property.id">
                     <td class="align-middle px-3" scope="row">{{index +1}}</td>
                     <td class="align-middle px-3 mobile-width" colspan="5" style="width: 250px" >
                         <div class="d-flex align-items-center mobile-width"> 
@@ -35,7 +35,7 @@
                                            
                                             <div class="property-desc mb-2">
                                                 <h3 class="m-0 p-0 f-22">
-                                                    {{propert.title}} 
+                                                    {{property.title}} 
                                                 </h3>
                                             </div>
                                             <div class="d-flex justify-content-between gap-3">
@@ -43,19 +43,19 @@
                                                     <div class="icon">
                                                         <i class="fas fa-bed"></i>
                                                     </div>
-                                                    <p class="m-0 p-0 f-16"><span> {{propert.beds}} </span> beds</p>
+                                                    <p class="m-0 p-0 f-16"><span> {{property.beds}} </span> beds</p>
                                                 </div>
                                                 <div class="bath-count">
                                                     <div class="icon">
                                                         <i class="fas fa-bath"></i>
                                                     </div>
-                                                    <p class="m-0 p-0 f-16"><span> {{propert.baths}} </span> baths</p>
+                                                    <p class="m-0 p-0 f-16"><span> {{property.baths}} </span> baths</p>
                                                 </div>
                                                 <div class="square-ft">
                                                     <div class="icon">
                                                         <i class="fas fa-draw-square"></i>
                                                     </div>
-                                                    <p class="m-0 p-0 f-16"><span>{{propert.home_area}} </span> sqft</p>
+                                                    <p class="m-0 p-0 f-16"><span>{{property.home_area}} </span> sqft</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -63,9 +63,10 @@
                          
                         
                         </td>
-                    <td class="align-middle px-3">{{propert.price}}</td>
-                    <td class="align-middle px-3"><img src="/assets/images/property/qr-code.png" /></td>
-                    <td class="align-middle px-3">  <Link :href="route('property.edit' ,propert.id)" class="text-dark"><i class="fas fa-edit"></i></Link><span type="button" @click="deleteProperty(propert.id)"  class="text-dark"><i class="far fa-trash-alt"></i></span></td>
+                    <td class="align-middle px-3">{{property.price}}</td>
+                    <td class="align-middle px-3"><img :src="property.qr_code" /></td>
+                    <!-- <td class="align-middle px-3">{{property.qr_code}}</td> -->
+                    <td class="align-middle px-3">  <Link :href="route('property.edit' ,property.id)" class="text-dark"><i class="fas fa-edit"></i></Link><span type="button" @click="deleteProperty(property.id)"  class="text-dark"><i class="far fa-trash-alt"></i></span></td>
                   </tr>
                 
                
@@ -81,6 +82,7 @@
 </template>
 
 <script>
+
 import TopBar from "@/Components/Header";
 import BottomBar from "@/Components/BottomBar";
 import Footer from "@/Components/Footer";
@@ -89,9 +91,9 @@ import { Inertia } from '@inertiajs/inertia'
 import { Link } from '@inertiajs/inertia-vue'
 
 export default {
-  name: "propertyListing",
+  name: "propertyListing", 
   components: { TopBar, BottomBar, SideBar, Footer , Link},
-  props:[ 'property'] , 
+  props:[ 'properties'] , 
 
   methods:{
     deleteProperty(id){
