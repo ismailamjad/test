@@ -13,9 +13,9 @@ class Property extends Model
     protected $guarded = [];
     protected $appends = ['qr_code'];
 
-    public function images(){
-        return $this->morphToMany(Image::class , 'imageable');
-    }
+    // public function images(){
+    //     return $this->morphToMany(Image::class , 'imageable');
+    // }
 
 
     public function getQrCodeAttribute() {
