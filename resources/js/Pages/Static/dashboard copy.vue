@@ -76,10 +76,10 @@
   
     import Label from "@/Jetstream/Label";
     import Button from "@/Jetstream/Button";
-    import TopBar from "@/Components/Header";
-    import BottomBar from "@/Components/BottomBar";
-    import Footer from "@/Components/Footer";
-    import SideBar from "@/Components/Sidebar";
+    import SideBar from '@/Components/Sidebar';
+     import TopBar from "@/Components/Header";
+import BottomBar from "@/Components/BottomBar";
+import Footer from "@/Components/Footer";
 
 
 

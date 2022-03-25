@@ -58,7 +58,64 @@
     }
     .bottom-bar{margin-top:0px !important; display: none}
 }
+.property-type input[type=radio]{display: none;}
+.property-type input[type=radio] + label:before {
+    font-family: 'Font Awesome 5 Pro' !important;
+   
+  }
+  
+  .property-type #homes + label:before {width: 100px;
+    text-align: center;
+    /* padding: 20px; */
+    color: #fff;
+    content: "\f015" !important;
+    border: 1px solid #eee;
+    height: 75px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+} /* unchecked icon */
+  
+  .property-type #homes:checked + label:before { border-radius: 5px; color: #222; background: #fff !important; content: "\f015" !important; } /* checked icon */
 
+  .property-type #apartment + label:before {width: 100px;
+    text-align: center;
+    /* padding: 20px; */
+    color: #fff;
+    content: "\f1ad" !important;
+    border: 1px solid #eee;
+    height: 75px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+} /* unchecked icon */
+  
+  .property-type #apartment:checked + label:before { border-radius: 5px; color: #222; background: #fff !important; content: "\f1ad" !important; } 
+
+
+  .property-type #commercial + label:before {width: 100px;
+    text-align: center;
+    /* padding: 20px; */
+    color: #fff;
+    content: "\f64f" !important;
+    border: 1px solid #eee;
+    height: 75px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+} /* unchecked icon */
+  
+  .property-type #commercial:checked + label:before { border-radius: 5px; color: #222; background: #fff !important; content: "\f64f" !important; } 
+
+
+
+  .property-type label{
+    display: flex;
+    flex-direction: column;
+}
 @keyframes  animate {
     0% {
         width: 0px; 

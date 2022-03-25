@@ -42,6 +42,7 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function () {
 
     //user Routes.
     Route::resource('user', UserController::class);
+    
 });
 
 
