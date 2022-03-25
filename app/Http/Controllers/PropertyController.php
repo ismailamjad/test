@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Traits\ImageUpload;
 use App\Models\Property;
+use App\Models\PropertyReview;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 use Inertia\Inertia;
@@ -38,13 +39,9 @@ class PropertyController extends Controller
         dd($i_get_image);
 
 */
-
-
         $data = $request->all();
         $data['user_id'] = auth()->user()->id;
-        
         Property::create( $data);
-
         return redirect()->route('property.index');
     }
 
@@ -52,10 +49,14 @@ class PropertyController extends Controller
         
     }
    
-    public function show(Property $property)
+    //for detailed property
+    public function show(Request $request ,$id)
     {
-        //
-       
+        return Inertia::render('Property/propertydetail', [
+            "property" => Property::find($id),
+            "reviews" => PropertyReview::where('property_id' , $id)->get(),
+            "id" => $id,
+        ]); 
     }
 
    
@@ -65,8 +66,6 @@ class PropertyController extends Controller
             "property" => Property::findOrFail($id),
             "id" => $id,
         ]);
-        
-        // return Property::findOrFail($id);
     }
 
     
@@ -83,11 +82,4 @@ class PropertyController extends Controller
         return redirect()->route('property.index');
     }
 
-    public function property_detail($id){
-        return Inertia::render('Property/propertydetail', [
-            "property" => Property::find($id),
-            "id" => $id,
-        ]);
-        
-    }
 }

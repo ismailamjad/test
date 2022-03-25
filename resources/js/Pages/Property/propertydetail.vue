@@ -131,7 +131,7 @@
                     <div class="card mt-4">
                         <div class="card-body">
                             <h4 class="f-22 mb-4">Comments</h4>
-                            <div class="d-flex mb-4 mt-4">
+                            <!-- <div class="d-flex mb-4 mt-4">
                                 <div class="flex-shrink-0">
                                     <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-profiles/avatar-2.webp" alt="Generic placeholder image" class="img-fluid rounded-circle border border-dark border-3" style="width: 70px;">
                                 </div>
@@ -160,14 +160,17 @@
                                     <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
                                     <hr>
                                 </div>
-                            </div>
-                            <div class="d-flex mb-4 mt-4">
+                            </div> -->
+                            
+                            
+                            <div class="d-flex mb-4 mt-4"  v-for="review in reviews">
+                            <!-- <div class="d-flex mb-4 mt-4" > -->
                                 <div class="flex-shrink-0">
                                     <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-profiles/avatar-2.webp" alt="Generic placeholder image" class="img-fluid rounded-circle border border-dark border-3" style="width: 70px;">
                                 </div>
                                 <div class="flex-grow-1 ms-3">
                                     <div class="d-flex flex-row mb-2">
-                                        <h6 class="mb-0 me-2 f-22">User Name</h6>
+                                        <h6 class="mb-0 me-2 f-22">{{review.name}}</h6>
                                             <ul class="mb-0 list-unstyled d-flex flex-row" style="color: #E2B600;">
                                                 <li>
                                                 <i class="fas fa-star fa-xs"></i>
@@ -186,8 +189,8 @@
                                                 </li>
                                             </ul>
                                     </div>
-                                    <span>February 02, 2022</span>
-                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                                    <span>{{review.created_at}}</span>
+                                    <p>{{review.name}}</p>
                                     <hr>
                                 </div>
                             </div>
@@ -197,19 +200,19 @@
                     <div class="card mt-4">
                         <div class="card-body">
                             <h4 class="f-22 mb-2">Add a Review</h4>
-                            <form class="detail-form">
+                            <form class="detail-form" @submit.prevent="submitReview">
                                 <div class="row">
                                     <div class="form-group col-md-6">
-                                        <label class="f-18 mb-2 mt-3" for="inputName">Name</label>
-                                        <input type="text" class="form-control f-16" placeholder="Name">
+                                        <label class="f-18 mb-2 mt-3" for="inputName" >Name</label>
+                                        <input type="text" class="form-control f-16" v-model.number="ReviewForm.getName"  placeholder="Name">
                                     </div>
                                     <div class="form-group col-md-6">
-                                        <label class="f-18 mb-2 mt-3" for="inputEmail4">Email</label>
-                                        <input type="email" class="form-control f-16" placeholder="Email">
+                                        <label class="f-18 mb-2 mt-3" for="inputEmail4" >Email</label>
+                                        <input type="email" class="form-control f-16"  v-model.number="ReviewForm.getEmail"  placeholder="Email">
                                     </div>
                                     <div class="form-group">
                                         <label class="f-18 mb-2 mt-3" for="exampleFormControlTextarea1">Message</label>
-                                        <textarea class="form-control f-16" id="exampleFormControlTextarea1" rows="4" placeholder="Message"></textarea>
+                                        <textarea class="form-control f-16" id="exampleFormControlTextarea1"  v-model.number="ReviewForm.getMessage"  rows="4" placeholder="Message"></textarea>
                                     </div>
                                     
                                 </div>
@@ -251,10 +254,10 @@
                                 </div>
                             </div>
 
-                            <form class="detail-form">
+                            <form class="detail-form" >
                                 <div class="form-group">
                                     <label class="f-18 mb-2 mt-3" for="exampleInputName">Name</label>
-                                    <input type="text" class="form-control f-16 " id="exampleInputName" placeholder="Name">
+                                    <input type="text" class="form-control f-16 "  id="exampleInputName" placeholder="Name">
                                 </div>
                                 <div class="form-group">
                                     <label class="f-18 mb-2 mt-3" for="exampleInputEmail1">Email</label>
@@ -286,10 +289,50 @@ import TopBar from "@/Components/Header";
 import BottomBar from "@/Components/BottomBar";
 import Footer from "@/Components/Footer";
 export default {
-        components: {
+   
+    components: {
                      TopBar, BottomBar, Footer
                  },
-        props:[ 'property' , 'id'] , 
+    props:[ 'property' , 'id' , 'reviews' ] , 
+
+    data: () => ({
+                reviews: [],
+            ReviewForm: {
+                getName: null ,
+                getEmail: null,
+                getMessage: null
+                }
+            }),
+    methods:{
+        clearFormAfterSubmit() {
+            this.ReviewForm.getName = "";
+            this.ReviewForm.getEmail = "";
+            this.ReviewForm.getMessage = '';
+        },
+
+        submitReview() {
+             this.reviews.push({
+                name: this.ReviewForm.getName,
+                email: this.ReviewForm.getEmail,
+                message: this.ReviewForm.getMessage
+            })
+
+            let data = new FormData();
+            data.append('name', this.ReviewForm.getName);
+            data.append('email', this.ReviewForm.getEmail);
+            data.append('message', this.ReviewForm.getMessage);
+            data.append('property_id', this.id);
+            this.$inertia.post('/property/'+ this.id + '/reviews',data).then(() => {
+                this.clearFormAfterSubmit();
+            });
+        },
+
+    },
+    // mounted(){
+    //     this.$inertia.get('/property/'+ this.id + '/reviews').then(() => {
+    //             data => this.reviews = reviews
+    //         });
+    // }
 }
 </script>
 

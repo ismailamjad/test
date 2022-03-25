@@ -6170,6 +6170,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Components_Sidebar__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @/Components/Sidebar */ "./resources/js/Components/Sidebar.vue");
 /* harmony import */ var _inertiajs_inertia__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @inertiajs/inertia */ "./node_modules/@inertiajs/inertia/dist/index.js");
 /* harmony import */ var _inertiajs_inertia_vue__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @inertiajs/inertia-vue */ "./node_modules/@inertiajs/inertia-vue/dist/index.js");
+/* harmony import */ var _Jetstream_Button_vue__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../Jetstream/Button.vue */ "./resources/js/Jetstream/Button.vue");
 //
 //
 //
@@ -6253,6 +6254,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+
 
 
 
@@ -6272,6 +6274,9 @@ __webpack_require__.r(__webpack_exports__);
   methods: {
     deleteProperty: function deleteProperty(id) {
       _inertiajs_inertia__WEBPACK_IMPORTED_MODULE_4__.Inertia["delete"]('property/' + id);
+    },
+    viewProperty: function viewProperty(id) {
+      _inertiajs_inertia__WEBPACK_IMPORTED_MODULE_4__.Inertia.get(route('property.show', id));
     }
   }
 });
@@ -6575,6 +6580,9 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
 
 
 
@@ -6584,7 +6592,46 @@ __webpack_require__.r(__webpack_exports__);
     BottomBar: _Components_BottomBar__WEBPACK_IMPORTED_MODULE_1__["default"],
     Footer: _Components_Footer__WEBPACK_IMPORTED_MODULE_2__["default"]
   },
-  props: ['property', 'id']
+  props: ['property', 'id', 'reviews'],
+  data: function data() {
+    return {
+      reviews: [],
+      ReviewForm: {
+        getName: null,
+        getEmail: null,
+        getMessage: null
+      }
+    };
+  },
+  methods: {
+    clearFormAfterSubmit: function clearFormAfterSubmit() {
+      this.ReviewForm.getName = "";
+      this.ReviewForm.getEmail = "";
+      this.ReviewForm.getMessage = '';
+    },
+    submitReview: function submitReview() {
+      var _this = this;
+
+      this.reviews.push({
+        name: this.ReviewForm.getName,
+        email: this.ReviewForm.getEmail,
+        message: this.ReviewForm.getMessage
+      });
+      var data = new FormData();
+      data.append('name', this.ReviewForm.getName);
+      data.append('email', this.ReviewForm.getEmail);
+      data.append('message', this.ReviewForm.getMessage);
+      data.append('property_id', this.id);
+      this.$inertia.post('/property/' + this.id + '/reviews', data).then(function () {
+        _this.clearFormAfterSubmit();
+      });
+    }
+  } // mounted(){
+  //     this.$inertia.get('/property/'+ this.id + '/reviews').then(() => {
+  //             data => this.reviews = reviews
+  //         });
+  // }
+
 });
 
 /***/ }),
@@ -43942,13 +43989,27 @@ var render = function() {
                             ]),
                             _vm._v(" "),
                             _c("td", { staticClass: "align-middle px-3" }, [
-                              _c("img", { attrs: { src: property.qr_code } })
+                              _vm._v(_vm._s(property.qr_code))
                             ]),
                             _vm._v(" "),
                             _c(
                               "td",
                               { staticClass: "align-middle px-3" },
                               [
+                                _c(
+                                  "span",
+                                  {
+                                    staticClass: "text-dark",
+                                    attrs: { type: "button" },
+                                    on: {
+                                      click: function($event) {
+                                        return _vm.viewProperty(property.id)
+                                      }
+                                    }
+                                  },
+                                  [_c("i", { staticClass: "fas fa-eye" })]
+                                ),
+                                _vm._v(" "),
                                 _c(
                                   "Link",
                                   {
@@ -44223,9 +44284,200 @@ var render = function() {
               _vm._v(" "),
               _vm._m(3),
               _vm._v(" "),
-              _vm._m(4),
+              _c("div", { staticClass: "card mt-4" }, [
+                _c(
+                  "div",
+                  { staticClass: "card-body" },
+                  [
+                    _c("h4", { staticClass: "f-22 mb-4" }, [
+                      _vm._v("Comments")
+                    ]),
+                    _vm._v(" "),
+                    _vm._l(_vm.reviews, function(review) {
+                      return _c("div", { staticClass: "d-flex mb-4 mt-4" }, [
+                        _vm._m(4, true),
+                        _vm._v(" "),
+                        _c("div", { staticClass: "flex-grow-1 ms-3" }, [
+                          _c("div", { staticClass: "d-flex flex-row mb-2" }, [
+                            _c("h6", { staticClass: "mb-0 me-2 f-22" }, [
+                              _vm._v(_vm._s(review.name))
+                            ]),
+                            _vm._v(" "),
+                            _vm._m(5, true)
+                          ]),
+                          _vm._v(" "),
+                          _c("span", [_vm._v(_vm._s(review.created_at))]),
+                          _vm._v(" "),
+                          _c("p", [_vm._v(_vm._s(review.name))]),
+                          _vm._v(" "),
+                          _c("hr")
+                        ])
+                      ])
+                    })
+                  ],
+                  2
+                )
+              ]),
               _vm._v(" "),
-              _vm._m(5)
+              _c("div", { staticClass: "card mt-4" }, [
+                _c("div", { staticClass: "card-body" }, [
+                  _c("h4", { staticClass: "f-22 mb-2" }, [
+                    _vm._v("Add a Review")
+                  ]),
+                  _vm._v(" "),
+                  _c(
+                    "form",
+                    {
+                      staticClass: "detail-form",
+                      on: {
+                        submit: function($event) {
+                          $event.preventDefault()
+                          return _vm.submitReview.apply(null, arguments)
+                        }
+                      }
+                    },
+                    [
+                      _c("div", { staticClass: "row" }, [
+                        _c("div", { staticClass: "form-group col-md-6" }, [
+                          _c(
+                            "label",
+                            {
+                              staticClass: "f-18 mb-2 mt-3",
+                              attrs: { for: "inputName" }
+                            },
+                            [_vm._v("Name")]
+                          ),
+                          _vm._v(" "),
+                          _c("input", {
+                            directives: [
+                              {
+                                name: "model",
+                                rawName: "v-model.number",
+                                value: _vm.ReviewForm.getName,
+                                expression: "ReviewForm.getName",
+                                modifiers: { number: true }
+                              }
+                            ],
+                            staticClass: "form-control f-16",
+                            attrs: { type: "text", placeholder: "Name" },
+                            domProps: { value: _vm.ReviewForm.getName },
+                            on: {
+                              input: function($event) {
+                                if ($event.target.composing) {
+                                  return
+                                }
+                                _vm.$set(
+                                  _vm.ReviewForm,
+                                  "getName",
+                                  _vm._n($event.target.value)
+                                )
+                              },
+                              blur: function($event) {
+                                return _vm.$forceUpdate()
+                              }
+                            }
+                          })
+                        ]),
+                        _vm._v(" "),
+                        _c("div", { staticClass: "form-group col-md-6" }, [
+                          _c(
+                            "label",
+                            {
+                              staticClass: "f-18 mb-2 mt-3",
+                              attrs: { for: "inputEmail4" }
+                            },
+                            [_vm._v("Email")]
+                          ),
+                          _vm._v(" "),
+                          _c("input", {
+                            directives: [
+                              {
+                                name: "model",
+                                rawName: "v-model.number",
+                                value: _vm.ReviewForm.getEmail,
+                                expression: "ReviewForm.getEmail",
+                                modifiers: { number: true }
+                              }
+                            ],
+                            staticClass: "form-control f-16",
+                            attrs: { type: "email", placeholder: "Email" },
+                            domProps: { value: _vm.ReviewForm.getEmail },
+                            on: {
+                              input: function($event) {
+                                if ($event.target.composing) {
+                                  return
+                                }
+                                _vm.$set(
+                                  _vm.ReviewForm,
+                                  "getEmail",
+                                  _vm._n($event.target.value)
+                                )
+                              },
+                              blur: function($event) {
+                                return _vm.$forceUpdate()
+                              }
+                            }
+                          })
+                        ]),
+                        _vm._v(" "),
+                        _c("div", { staticClass: "form-group" }, [
+                          _c(
+                            "label",
+                            {
+                              staticClass: "f-18 mb-2 mt-3",
+                              attrs: { for: "exampleFormControlTextarea1" }
+                            },
+                            [_vm._v("Message")]
+                          ),
+                          _vm._v(" "),
+                          _c("textarea", {
+                            directives: [
+                              {
+                                name: "model",
+                                rawName: "v-model.number",
+                                value: _vm.ReviewForm.getMessage,
+                                expression: "ReviewForm.getMessage",
+                                modifiers: { number: true }
+                              }
+                            ],
+                            staticClass: "form-control f-16",
+                            attrs: {
+                              id: "exampleFormControlTextarea1",
+                              rows: "4",
+                              placeholder: "Message"
+                            },
+                            domProps: { value: _vm.ReviewForm.getMessage },
+                            on: {
+                              input: function($event) {
+                                if ($event.target.composing) {
+                                  return
+                                }
+                                _vm.$set(
+                                  _vm.ReviewForm,
+                                  "getMessage",
+                                  _vm._n($event.target.value)
+                                )
+                              },
+                              blur: function($event) {
+                                return _vm.$forceUpdate()
+                              }
+                            }
+                          })
+                        ])
+                      ]),
+                      _vm._v(" "),
+                      _c(
+                        "button",
+                        {
+                          staticClass: "btn btn-primary",
+                          attrs: { type: "submit" }
+                        },
+                        [_vm._v("Submit")]
+                      )
+                    ]
+                  )
+                ])
+              ])
             ]),
             _vm._v(" "),
             _vm._m(6)
@@ -44376,184 +44628,40 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "card mt-4" }, [
-      _c("div", { staticClass: "card-body" }, [
-        _c("h4", { staticClass: "f-22 mb-4" }, [_vm._v("Comments")]),
-        _vm._v(" "),
-        _c("div", { staticClass: "d-flex mb-4 mt-4" }, [
-          _c("div", { staticClass: "flex-shrink-0" }, [
-            _c("img", {
-              staticClass:
-                "img-fluid rounded-circle border border-dark border-3",
-              staticStyle: { width: "70px" },
-              attrs: {
-                src:
-                  "https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-profiles/avatar-2.webp",
-                alt: "Generic placeholder image"
-              }
-            })
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "flex-grow-1 ms-3" }, [
-            _c("div", { staticClass: "d-flex flex-row mb-2" }, [
-              _c("h6", { staticClass: "mb-0 me-2 f-22" }, [
-                _vm._v("User Name")
-              ]),
-              _vm._v(" "),
-              _c(
-                "ul",
-                {
-                  staticClass: "mb-0 list-unstyled d-flex flex-row",
-                  staticStyle: { color: "#E2B600" }
-                },
-                [
-                  _c("li", [_c("i", { staticClass: "fas fa-star fa-xs" })]),
-                  _vm._v(" "),
-                  _c("li", [_c("i", { staticClass: "fas fa-star fa-xs" })]),
-                  _vm._v(" "),
-                  _c("li", [_c("i", { staticClass: "fas fa-star fa-xs" })]),
-                  _vm._v(" "),
-                  _c("li", [_c("i", { staticClass: "fas fa-star fa-xs" })]),
-                  _vm._v(" "),
-                  _c("li", [_c("i", { staticClass: "fas fa-star fa-xs" })])
-                ]
-              )
-            ]),
-            _vm._v(" "),
-            _c("span", [_vm._v("February 02, 2022")]),
-            _vm._v(" "),
-            _c("p", [
-              _vm._v(
-                "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
-              )
-            ]),
-            _vm._v(" "),
-            _c("hr")
-          ])
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "d-flex mb-4 mt-4" }, [
-          _c("div", { staticClass: "flex-shrink-0" }, [
-            _c("img", {
-              staticClass:
-                "img-fluid rounded-circle border border-dark border-3",
-              staticStyle: { width: "70px" },
-              attrs: {
-                src:
-                  "https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-profiles/avatar-2.webp",
-                alt: "Generic placeholder image"
-              }
-            })
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "flex-grow-1 ms-3" }, [
-            _c("div", { staticClass: "d-flex flex-row mb-2" }, [
-              _c("h6", { staticClass: "mb-0 me-2 f-22" }, [
-                _vm._v("User Name")
-              ]),
-              _vm._v(" "),
-              _c(
-                "ul",
-                {
-                  staticClass: "mb-0 list-unstyled d-flex flex-row",
-                  staticStyle: { color: "#E2B600" }
-                },
-                [
-                  _c("li", [_c("i", { staticClass: "fas fa-star fa-xs" })]),
-                  _vm._v(" "),
-                  _c("li", [_c("i", { staticClass: "fas fa-star fa-xs" })]),
-                  _vm._v(" "),
-                  _c("li", [_c("i", { staticClass: "fas fa-star fa-xs" })]),
-                  _vm._v(" "),
-                  _c("li", [_c("i", { staticClass: "fas fa-star fa-xs" })]),
-                  _vm._v(" "),
-                  _c("li", [_c("i", { staticClass: "fas fa-star fa-xs" })])
-                ]
-              )
-            ]),
-            _vm._v(" "),
-            _c("span", [_vm._v("February 02, 2022")]),
-            _vm._v(" "),
-            _c("p", [
-              _vm._v(
-                "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
-              )
-            ]),
-            _vm._v(" "),
-            _c("hr")
-          ])
-        ])
-      ])
+    return _c("div", { staticClass: "flex-shrink-0" }, [
+      _c("img", {
+        staticClass: "img-fluid rounded-circle border border-dark border-3",
+        staticStyle: { width: "70px" },
+        attrs: {
+          src:
+            "https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-profiles/avatar-2.webp",
+          alt: "Generic placeholder image"
+        }
+      })
     ])
   },
   function() {
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "card mt-4" }, [
-      _c("div", { staticClass: "card-body" }, [
-        _c("h4", { staticClass: "f-22 mb-2" }, [_vm._v("Add a Review")]),
+    return _c(
+      "ul",
+      {
+        staticClass: "mb-0 list-unstyled d-flex flex-row",
+        staticStyle: { color: "#E2B600" }
+      },
+      [
+        _c("li", [_c("i", { staticClass: "fas fa-star fa-xs" })]),
         _vm._v(" "),
-        _c("form", { staticClass: "detail-form" }, [
-          _c("div", { staticClass: "row" }, [
-            _c("div", { staticClass: "form-group col-md-6" }, [
-              _c(
-                "label",
-                { staticClass: "f-18 mb-2 mt-3", attrs: { for: "inputName" } },
-                [_vm._v("Name")]
-              ),
-              _vm._v(" "),
-              _c("input", {
-                staticClass: "form-control f-16",
-                attrs: { type: "text", placeholder: "Name" }
-              })
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "form-group col-md-6" }, [
-              _c(
-                "label",
-                {
-                  staticClass: "f-18 mb-2 mt-3",
-                  attrs: { for: "inputEmail4" }
-                },
-                [_vm._v("Email")]
-              ),
-              _vm._v(" "),
-              _c("input", {
-                staticClass: "form-control f-16",
-                attrs: { type: "email", placeholder: "Email" }
-              })
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "form-group" }, [
-              _c(
-                "label",
-                {
-                  staticClass: "f-18 mb-2 mt-3",
-                  attrs: { for: "exampleFormControlTextarea1" }
-                },
-                [_vm._v("Message")]
-              ),
-              _vm._v(" "),
-              _c("textarea", {
-                staticClass: "form-control f-16",
-                attrs: {
-                  id: "exampleFormControlTextarea1",
-                  rows: "4",
-                  placeholder: "Message"
-                }
-              })
-            ])
-          ]),
-          _vm._v(" "),
-          _c(
-            "button",
-            { staticClass: "btn btn-primary", attrs: { type: "submit" } },
-            [_vm._v("Submit")]
-          )
-        ])
-      ])
-    ])
+        _c("li", [_c("i", { staticClass: "fas fa-star fa-xs" })]),
+        _vm._v(" "),
+        _c("li", [_c("i", { staticClass: "fas fa-star fa-xs" })]),
+        _vm._v(" "),
+        _c("li", [_c("i", { staticClass: "fas fa-star fa-xs" })]),
+        _vm._v(" "),
+        _c("li", [_c("i", { staticClass: "fas fa-star fa-xs" })])
+      ]
+    )
   },
   function() {
     var _vm = this
