@@ -127,7 +127,17 @@
         width: 300px;
    }
 }
-
+@media (max-width:767px){
+    .property-type #homes + label:before, 
+    .property-type #apartment + label:before, 
+    .property-type #commercial + label:before {
+        width: 45px;
+        height:45px;
+    }
+    .property-type label{
+        align-items: center;
+    }
+}
 
 @media (min-width: 768px) and (max-width: 979px) {
     .inner-wrapper {
