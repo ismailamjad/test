@@ -64,8 +64,8 @@
                         
                         </td>
                     <td class="align-middle px-3">{{property.price}}</td>
-                    <!-- <td class="align-middle px-3"><vue-qrcode value="Hello, World!" :options="{ width: 200 }"></vue-qrcode></td> -->
-                    <td class="align-middle px-3">{{property.qr_code}}</td>
+                    <td class="align-middle px-3"><img :src="property.qr_code" /></td>
+                    <!-- <td class="align-middle px-3">{{property.qr_code}}</td> -->
                     <td class="align-middle px-3"><span type="button" @click="viewProperty(property.id)" class="text-dark"><i class="fas fa-eye"></i></span>  <Link :href="route('property.edit' ,property.id)" class="text-dark"><i class="fas fa-edit"></i></Link><span type="button" @click="deleteProperty(property.id)"  class="text-dark"><i class="far fa-trash-alt"></i></span></td>
                   </tr>
                 
@@ -82,6 +82,7 @@
 </template>
 
 <script>
+
 import TopBar from "@/Components/Header";
 import BottomBar from "@/Components/BottomBar";
 import Footer from "@/Components/Footer";

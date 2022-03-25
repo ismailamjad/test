@@ -2202,6 +2202,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   name: 'TopBar'
 });
@@ -43989,7 +43990,7 @@ var render = function() {
                             ]),
                             _vm._v(" "),
                             _c("td", { staticClass: "align-middle px-3" }, [
-                              _vm._v(_vm._s(property.qr_code))
+                              _c("img", { attrs: { src: property.qr_code } })
                             ]),
                             _vm._v(" "),
                             _c(
