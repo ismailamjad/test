@@ -5795,6 +5795,14 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 
@@ -56372,157 +56380,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "render": () => (/* binding */ render),
 /* harmony export */   "staticRenderFns": () => (/* binding */ staticRenderFns)
 /* harmony export */ });
-var render = function() {
-  var _vm = this
-  var _h = _vm.$createElement
-  var _c = _vm._self._c || _h
-  return _c(
-    "section",
-    { staticClass: "edit-profile" },
-    [
-      _c("TopBar"),
-      _vm._v(" "),
-      _c("BottomBar"),
-      _vm._v(" "),
-      _c("div", { staticClass: "container" }, [
-        _c("div", { staticClass: "row" }, [
-          _c("div", { staticClass: "col-lg-2" }, [
-            _c("h2", { staticClass: "f-18 mt-3" }, [_vm._v("Edit Profile")]),
-            _vm._v(" "),
-            _c(
-              "div",
-              [
-                _c("vue-upload-multiple-image", {
-                  attrs: {
-                    "data-images": _vm.images,
-                    idUpload: "myIdUpload",
-                    editUpload: "myIdEdit",
-                    multiple: false,
-                    dragText: "Drag & Drop Image",
-                    browseText: "Or Select",
-                    primaryText: "Default",
-                    popupText: "This image will be displayed as default"
-                  },
-                  on: {
-                    "upload-success": _vm.uploadImageSuccess,
-                    "before-remove": _vm.beforeRemove,
-                    "edit-image": _vm.editImage
-                  }
-                })
-              ],
-              1
-            )
-          ]),
-          _vm._v(" "),
-          _vm._m(0)
-        ])
-      ]),
-      _vm._v(" "),
-      _c("Footer")
-    ],
-    1
-  )
-}
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "col-lg-12" }, [
-      _c("div", { staticClass: "card mt-4 mb-4" }, [
-        _c("div", { staticClass: "card-body" }, [
-          _c("form", { staticClass: "detail-form" }, [
-            _c("div", { staticClass: "row" }, [
-              _c("div", { staticClass: "form-group col-md-4" }, [
-                _c("label", { staticClass: "f-18 mb-2 mt-3" }, [
-                  _vm._v("First Name")
-                ]),
-                _vm._v(" "),
-                _c("input", {
-                  staticClass: "form-control f-16",
-                  attrs: { type: "text", placeholder: "First Name" }
-                })
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "form-group col-md-4" }, [
-                _c("label", { staticClass: "f-18 mb-2 mt-3" }, [
-                  _vm._v("Last Name")
-                ]),
-                _vm._v(" "),
-                _c("input", {
-                  staticClass: "form-control f-16",
-                  attrs: { type: "text", placeholder: "Last Name" }
-                })
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "form-group col-md-4" }, [
-                _c("label", { staticClass: "f-18 mb-2 mt-3" }, [
-                  _vm._v("User Name")
-                ]),
-                _vm._v(" "),
-                _c("input", {
-                  staticClass: "form-control f-16",
-                  attrs: { type: "text", placeholder: "User Name" }
-                })
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "form-group col-md-4" }, [
-                _c("label", { staticClass: "f-18 mb-2 mt-3" }, [
-                  _vm._v("Mobile Number")
-                ]),
-                _vm._v(" "),
-                _c("input", {
-                  staticClass: "form-control f-16",
-                  attrs: { type: "text", placeholder: "Mobile Number" }
-                })
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "form-group col-md-4" }, [
-                _c("label", { staticClass: "f-18 mb-2 mt-3" }, [
-                  _vm._v("Email")
-                ]),
-                _vm._v(" "),
-                _c("input", {
-                  staticClass: "form-control f-16",
-                  attrs: { type: "text", placeholder: "user@roamyhome.com" }
-                })
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "form-group col-md-4" }, [
-                _c("label", { staticClass: "f-18 mb-2 mt-3" }, [
-                  _vm._v("Specialized In")
-                ]),
-                _vm._v(" "),
-                _c("input", {
-                  staticClass: "form-control f-16",
-                  attrs: { type: "text", placeholder: "Homes" }
-                })
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "form-group" }, [
-                _c("label", { staticClass: "f-18 mb-2 mt-3" }, [
-                  _vm._v("Bio (Optional)")
-                ]),
-                _vm._v(" "),
-                _c("textarea", {
-                  staticClass: "form-control f-16",
-                  attrs: { rows: "4", placeholder: "Describe" }
-                })
-              ])
-            ]),
-            _vm._v(" "),
-            _c(
-              "button",
-              { staticClass: "btn btn-primary", attrs: { type: "submit" } },
-              [_vm._v("Update")]
-            )
-          ])
-        ])
-      ])
-    ])
-  }
-]
-render._withStripped = true
+var render = function () {}
+var staticRenderFns = []
 
 
 
