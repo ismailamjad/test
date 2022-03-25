@@ -8,7 +8,8 @@ import PortalVue from 'portal-vue';
 Vue.mixin({ methods: { route } });
 Vue.use(InertiaPlugin);
 Vue.use(PortalVue);
-
+import VueQRCodeComponent from 'vue-qrcode-component';
+Vue.component('qr-code', VueQRCodeComponent);
 const app = document.getElementById('app');
 
 new Vue({

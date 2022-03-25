@@ -70,7 +70,7 @@
                         
                         </td>
                     <td class="align-middle px-3">15000</td>
-                    <td class="align-middle px-3"><img src="/assets/images/property/qr-code.png" /></td>
+                    <td class="align-middle px-3"><qr-code text="Text to encode" style="height:100px; width: 100px;"></qr-code></td>
                     <td class="align-middle px-3"><a href="#" class="text-dark"><i class="fas fa-eye"></i></a> <a href="#" class="text-dark"><i class="fas fa-edit"></i></a> <a href="#" class="text-dark"><i class="far fa-trash-alt"></i></a></td>
                   </tr>
                     <tr>
@@ -111,7 +111,7 @@
                         
                         </td>
                     <td class="align-middle px-3">15000</td>
-                    <td class="align-middle px-3"><img src="/assets/images/property/qr-code.png" /></td>
+                    <td class="align-middle px-3"><qr-code text="Red to encode" style="height:100px; width: 100px;"></qr-code></td>
                     <td class="align-middle px-3"><a href="#" class="text-dark"><i class="fas fa-eye"></i></a> <a href="#" class="text-dark"><i class="fas fa-edit"></i></a> <a href="#" class="text-dark"><i class="far fa-trash-alt"></i></a></td>
                   </tr>
                
