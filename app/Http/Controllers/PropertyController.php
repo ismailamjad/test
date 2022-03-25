@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Traits\ImageUpload;
+use App\Models\Agent;
 use App\Models\Property;
 use App\Models\PropertyReview;
 use Illuminate\Http\Request;
@@ -81,5 +82,13 @@ class PropertyController extends Controller
         Property::find($id)->delete();
         return redirect()->route('property.index');
     }
+
+    public function contactAgent(Request $request, $id)
+    {
+        $data = $request->all();
+        Agent::create( $data);
+        return redirect()->route('property.show' , $id);
+    }
+    
 
 }

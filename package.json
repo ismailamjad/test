@@ -31,9 +31,11 @@
         "@chenfengyuan/vue-qrcode": "^2.0.0",
         "echarts": "^5.3.1",
         "qrcode": "^1.5.0",
+        "v-toaster": "^1.0.3",
         "vue-echarts": "^6.0.2",
         "vue-qrcode-component": "^2.1.1",
         "vue-simple-range-slider": "^0.1.10",
+        "vue-toasted": "^1.1.28",
         "vue-upload-drop-images": "^1.0.7",
         "vue-upload-multiple-image": "^1.1.6"
     }

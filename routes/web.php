@@ -1,7 +1,10 @@
 <?php
 
+use App\Http\Controllers\AgentController;
 use App\Http\Controllers\PropertyController;
+use App\Http\Controllers\PropertyReviewController;
 use App\Http\Controllers\UserController;
+use App\Models\PropertyReview;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
@@ -37,7 +40,11 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
 
 Route::middleware(['auth:sanctum', 'verified'])->group(function () {
     Route::resource('property', PropertyController::class);
-    Route::get('property-detail/{id}', [PropertyController::class , 'property_detail']);
+    Route::resource('property/{id}/reviews', PropertyReviewController::class);
+    
+    Route::post('property/{id}/contact', [PropertyController::class , 'contactAgent']);
+
+
     // Route::post('property/upload-images', [PropertyController::class , 'uploadImages']);
 
     //user Routes.

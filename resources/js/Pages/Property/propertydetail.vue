@@ -225,55 +225,9 @@
                 <div class="col-lg-3">
                     <div class="card">
                         <div class="card-body">
-                            <h4 class="f-22">Contact Agent</h4>
-                            <div class="d-flex align-items-center mb-4 mt-4">
-                                <div class="flex-shrink-0">
-                                    <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-profiles/avatar-2.webp" alt="Generic placeholder image" class="img-fluid rounded-circle border border-dark border-3" style="width: 70px;">
-                                </div>
-                                <div class="flex-grow-1 ms-3">
-                                    <div class="d-flex flex-column mb-2">
-                                        <h6 class="mb-0 me-2 f-22">Agent Name</h6>
-                                            <ul class="mb-0 list-unstyled d-flex flex-row" style="color: #E2B600;">
-                                                <li>
-                                                <i class="fas fa-star fa-xs"></i>
-                                                </li>
-                                                <li>
-                                                <i class="fas fa-star fa-xs"></i>
-                                                </li>
-                                                <li>
-                                                <i class="fas fa-star fa-xs"></i>
-                                                </li>
-                                                <li>
-                                                <i class="fas fa-star fa-xs"></i>
-                                                </li>
-                                                <li>
-                                                <i class="fas fa-star fa-xs"></i>
-                                                </li>
-                                            </ul>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <form class="detail-form" >
-                                <div class="form-group">
-                                    <label class="f-18 mb-2 mt-3" for="exampleInputName">Name</label>
-                                    <input type="text" class="form-control f-16 "  id="exampleInputName" placeholder="Name">
-                                </div>
-                                <div class="form-group">
-                                    <label class="f-18 mb-2 mt-3" for="exampleInputEmail1">Email</label>
-                                    <input type="email" class="form-control f-16" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email">
-                                </div>
-                                <div class="form-group">
-                                    <label class="f-18 mb-2 mt-3" for="exampleInputPhone">Phone</label>
-                                    <input type="text" class="form-control f-16" id="exampleInputPhone" placeholder="Phone">
-                                </div>
-                                <div class="form-group">
-                                    <label class="f-18 mb-2 mt-3" for="exampleInputMessage">Message</label>
-                                    <textarea class="form-control f-16" id="exampleFormControlTextarea1" rows="4" placeholder="Message"></textarea>
-                                </div>
-                               
-                                <button type="submit" class="btn btn-primary">Send Message</button>
-                            </form>
+                             <AgentForm/>
+                  
+                           
                         </div>
                     </div>
                 </div>
@@ -288,10 +242,11 @@
 import TopBar from "@/Components/Header";
 import BottomBar from "@/Components/BottomBar";
 import Footer from "@/Components/Footer";
+import AgentForm from "@/Components/AgentForm";
 export default {
    
     components: {
-                     TopBar, BottomBar, Footer
+                     TopBar, BottomBar, Footer , AgentForm
                  },
     props:[ 'property' , 'id' , 'reviews' ] , 
 
@@ -322,17 +277,17 @@ export default {
             data.append('email', this.ReviewForm.getEmail);
             data.append('message', this.ReviewForm.getMessage);
             data.append('property_id', this.id);
-            this.$inertia.post('/property/'+ this.id + '/reviews',data).then(() => {
-                this.clearFormAfterSubmit();
+            this.$inertia.post('/property/'+ this.id + '/reviews',data).then(response => {
+                // if (response.status === 200) {
+                    this.clearFormAfterSubmit();
+                    this.$toaster.success('Your toaster success message.');
+                // }
+                
             });
         },
+          
 
     },
-    // mounted(){
-    //     this.$inertia.get('/property/'+ this.id + '/reviews').then(() => {
-    //             data => this.reviews = reviews
-    //         });
-    // }
 }
 </script>
 

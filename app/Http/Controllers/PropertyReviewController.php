@@ -42,7 +42,12 @@ class PropertyReviewController extends Controller
     {
         $data = $request->all();
         PropertyReview::create( $data);
-        return 'created';
+        
+        // return response()->json([
+        //     'status' => 200,
+        //     'message' => 'successfully Commented'
+        // ]);
+        return redirect()->back();
 
     }
 

@@ -64,7 +64,7 @@
                         
                         </td>
                     <td class="align-middle px-3">{{property.price}}</td>
-                     <td class="align-middle px-3"><qr-code :text="property.title + property.id" style="height:100px; width: 100px;"></qr-code></td>
+                     <td class="align-middle px-3"><qr-code :text="property.title" style="height:100px; width: 100px;"></qr-code></td>
                     <td class="align-middle px-3"><span type="button" @click="viewProperty(property.id)" class="text-dark"><i class="fas fa-eye"></i></span>  <Link :href="route('property.edit' ,property.id)" class="text-dark"><i class="fas fa-edit"></i></Link><span type="button" @click="deleteProperty(property.id)"  class="text-dark"><i class="far fa-trash-alt"></i></span></td>
                   </tr>
                 

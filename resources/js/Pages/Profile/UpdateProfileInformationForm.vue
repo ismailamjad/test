@@ -7,28 +7,27 @@
                 <div class="col-lg-2">
                     <h2 class="f-18 mt-3">Edit Profile</h2>
                     <div>
-                        <vue-upload-multiple-image
-                            @upload-success="uploadImageSuccess"
-                            @before-remove="beforeRemove"
-                            @edit-image="editImage"
-                            :data-image="image"
-                            idUpload="myIdUpload"
-                            editUpload="myIdEdit"
-                            :multiple ="false"
-                            dragText="Drag & Drop Image"
-                            browseText="Or Select"
-                            primaryText="Default"
-                            popupText ="This image will be displayed as default">
-                        </vue-upload-multiple-image>
+                        
                     </div>  
                 </div>
                 <div class="col-lg-12">
                     <div class="card mt-4 mb-4">
                         <div class="card-body">
-                            <form
-                                class="detail-form"
-                                @submit.prevent="updateUserInfo()"
-                            >
+                            <form class="detail-form" @submit.prevent="updateUserInfo()" enctype="multipart/form-data">
+                                     <input type="file" class="custom-file-input" id="customFile" ref="file" @change="handleFileObject()">
+                                    <!-- <vue-upload-multiple-image
+                                        @upload-success="uploadImageSuccess"
+                                        @before-remove="beforeRemove"
+                                        @edit-image="editImage"
+                                        :data-image="image"
+                                        idUpload="myIdUpload"
+                                        editUpload="myIdEdit"
+                                        :multiple ="false"
+                                        dragText="Drag & Drop Image"
+                                        browseText="Or Select"
+                                        primaryText="Default"
+                                        popupText ="This image will be displayed as default">
+                                    </vue-upload-multiple-image> -->
                                 <div class="row">
                                     <div class="form-group col-md-4">
                                         <label class="f-18 mb-2 mt-3"
@@ -205,8 +204,6 @@ import Footer from "@/Components/Footer";
                     specialized_in: null,
                     Bio: null,
                     
-                    
-                    
                 },
                  updatepasswordForm:this.$inertia.form({
                     current_password: '',
@@ -217,11 +214,16 @@ import Footer from "@/Components/Footer";
             }
         },
         methods:{
+             handleFileObject() {
+        this.image = this.$refs.file.files[0]
+        this.image = this.image.name
+      },
             // frontend methods
             uploadImageSuccess(formData, index, fileList) {
                 // this.files.push(formData.get("file"));
                 this.image = formData.get('file');
-                console.log(this.image);
+
+                console.log('upload()',this.image);
                 // Upload image api
                 // axios.post('http://your-url-upload', formData).then(response => {
                 //   console.log(response)
@@ -250,8 +252,6 @@ import Footer from "@/Components/Footer";
                 this.editform.specialized_in = this.profile.specialized_in;
                 this.editform.Bio = this.profile.Bio;
                 
-                this.editform.image = this.image;
-                console.log(this.image);
             },
              updatePassword() {
                 this.updatepasswordForm.put(route('user-password.update'), {
@@ -272,15 +272,18 @@ import Footer from "@/Components/Footer";
                 })
             },
             updateUserInfo(){
-                // let data = new FormData();
-                // data.append('image', this.image); 
-                // console.log(this.image);
-                this.$inertia.put(route('user.update' , this.id), this.editform);
+                const data = new FormData();
+                data.append('image', this.image); 
+                console.log(this.image);
+                
+                // console.log(data);
+                this.$inertia.put(route('user.update' , this.id), this.editform, data);
             },
 
         },
         mounted() {
                 this.fetchUserInfo();
+                
         },
 
     };

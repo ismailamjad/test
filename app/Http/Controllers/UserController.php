@@ -26,6 +26,8 @@ class UserController extends Controller
     
     public function update(Request $request ,$id)
     {
+        $files = $request->file('image');
+        dd($files);
         $profile = User::find($id);
         $profile->update($request->all());
         return redirect()->route('profile.show');
